@@ -14,7 +14,7 @@ describe('Example ES6+ Mocha / Chai Test', function () {
     expect(sum).to.be.a('function')
   })
 
-  it('result should be a number', function () {
+  it('result should return a number', function () {
     expect(sum(a, b)).to.be.a('number')
   })
 

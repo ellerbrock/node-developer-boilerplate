@@ -12,6 +12,7 @@ _Babel ES6 / ES7 npm Skeleton for the brave coders lifing on the edge_
 - ES6+ Testing via [babel-register](https://github.com/babel/babel/tree/master/packages/babel-register) with [Mocha](https://github.com/mochajs/mocha) & [Chai](https://github.com/chaijs/chai)
 - HTML Test Report via [mochawesome](https://github.com/adamgruber/mochawesome)
 - Code Linting with [ESLint](https://github.com/eslint/eslint)
+- Benchmark Testing with [benchmark.js](https://github.com/bestiejs/benchmark.js)
 - Javascript [Standard](https://github.com/feross/standard) Coding Style ready
 - Debugging with [babel-node-debug](https://github.com/crabdude/babel-node-debug)
 - Sourcemap generation
@@ -47,7 +48,19 @@ Repository: <https://github.com/babel/babili>
 
 ## Testing
 
+_Testing with `Mocha` and `Chai`, HTML Reports via `mochawesome`_
+
 `npm install --save-dev babel-register` - install `babel-register` for on the fly compilation `npm install --save-dev mocha chai` - install `mocha` and `chai` for testing `npm install --save-dev mochawesome` - install `mochawesome` to export tests results as html files
+
+**Info:**
+
+_The tests and benchmark stuff not really makes sence for a module that does nothing more then return a + b without any further checks. Its just a simple demonstration how to use the frameworks and tools with minimal example code to get you quick up and running. For further learning and better integration for your needs you should read more in detail about that stuff on the project pages._
+
+## Benchmarking Suite
+
+_Benchmark Testing with `Benchmark.js`_
+
+`npm install --save-dev benchmark microtime` - install `benchmark` and `microtime` for performance testing
 
 ## Debugging
 
@@ -96,6 +109,8 @@ To avoid messing around with separate config files like .babelrc, .eslintrc.json
   "scripts": {
     "start": "nodemon $2 --exec babel-node",
     "debug": "nodemon $2 --exec babel-node --debug",
+    "benchmark": "babel-node benchmark",
+    "benchmark:watch": "nodemon $2 --exec babel-node benchmark",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "build": "babel -s true src -d dist",
@@ -120,6 +135,8 @@ In case you want to run `./src/index.js` you can pass `npm start src` without th
 
 - `npm start src` - execute code with life reload via `nodemon` transpiled with `babel-node`
 - `npm run debug src` - execute code with debug flag enabled
+- `npm run benchmark` - run benchmark tests with `benchmark.js`
+- `npm run benchmark:watch` - run benchmark tests with `benchmark.js` and watch for file changes
 - `npm run lint` - code linting with `eslint`
 - `npm run lint:fix` - fix problems automatically with `eslint`
 - `npm test` - run tests with `mocha` and `chai` with spec as reporter

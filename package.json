@@ -20,6 +20,8 @@
   "scripts": {
     "start": "nodemon $2 --exec babel-node",
     "debug": "nodemon $2 --exec babel-node --debug",
+    "benchmark": "babel-node benchmark",
+    "benchmark:watch": "nodemon $2 --exec babel-node benchmark",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "build": "babel -s true src -d dist",
@@ -54,6 +56,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.14.0",
     "babili": "0.0.4",
+    "benchmark": "^2.1.1",
     "chai": "^3.5.0",
     "eslint": "^3.5.0",
     "eslint-config-standard": "^6.0.1",
@@ -62,5 +65,8 @@
     "mocha": "^3.0.2",
     "mochawesome": "^1.5.2",
     "nodemon": "^1.10.2"
+  },
+  "dependencies": {
+    "microtime": "^2.1.1"
   }
 }
