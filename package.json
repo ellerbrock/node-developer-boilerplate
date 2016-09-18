@@ -1,6 +1,6 @@
 {
   "name": "babel-es6-es7-npm-skeleton",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Babel NPM ES6 / ES7 Skeleton",
   "main": "./src/index.js",
   "babel": {
@@ -32,7 +32,9 @@
     "test:reporter-dot": "mocha -c -S -R dot 'tests' --compilers js:babel-register --check-leaks",
     "test:reporter-list": "mocha -c -S -R list 'tests' --compilers js:babel-register --check-leaks",
     "test:reporter-landing": "mocha -c -S -R landing 'tests' --compilers js:babel-register --check-leaks",
-    "test:export": "mocha -S -R mochawesome 'tests' --compilers js:babel-register --reporter-options reportDir=reports --check-leaks"
+    "test:export": "mocha -S -R mochawesome 'tests' --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
+    "scan:security": "nsp check",
+    "scan:updates": "ncu"
   },
   "keywords": [
     "babel",
@@ -62,11 +64,11 @@
     "eslint-config-standard": "^6.0.1",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
+    "microtime": "^2.1.1",
     "mocha": "^3.0.2",
     "mochawesome": "^1.5.2",
-    "nodemon": "^1.10.2"
-  },
-  "dependencies": {
-    "microtime": "^2.1.1"
+    "nodemon": "^1.10.2",
+    "npm-check-updates": "^2.8.0",
+    "nsp": "^2.6.1"
   }
 }
