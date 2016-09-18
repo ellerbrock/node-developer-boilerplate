@@ -6,7 +6,8 @@
   "babel": {
     "presets": [
       "es2015-node6",
-      "stage-0"
+      "stage-0",
+      "babili"
     ]
   },
   "eslintConfig": {
@@ -19,7 +20,10 @@
   "scripts": {
     "start": "nodemon $2 --exec babel-node",
     "debug": "nodemon $2 --exec babel-node --debug",
-    "compile": "babel src/ -d  dist/"
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "compile": "babel src -d dist",
+    "compile:sourcemaps": "babel -s true src -d dist"
   },
   "keywords": [
     "babel",
@@ -38,8 +42,10 @@
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-node-debug": "^2.0.0",
+    "babel-preset-babili": "0.0.2",
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-stage-0": "^6.5.0",
+    "babili": "0.0.4",
     "eslint": "^3.5.0",
     "eslint-config-standard": "^6.0.1",
     "eslint-plugin-promise": "^2.0.1",

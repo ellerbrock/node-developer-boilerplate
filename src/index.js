@@ -24,3 +24,5 @@ const dbCon = new Promise((resolve, reject) => {
 // .finally(log('finally ...'))
 // to use .finally() we still need to install a ES6-Shim:
 // https://www.npmjs.com/package/promise.prototype.finally
+
+log(`\r\nPromise Info: ${dbCon}`)

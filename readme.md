@@ -1,6 +1,19 @@
-# Babel ES6 / ES7 NPM Skeleton [![Javascript](https://badges.frapsoft.com/javascript/code/javascript.svg?v=100)](https://github.com/ellerbrock/javascript-badges/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badges/) [![Gitter Chat](https://badges.gitter.im/frapsoft/frapsoft.svg)](https://gitter.im/frapsoft/frapsoft/)  
+![Babel ES7 npm](https://github.frapsoft.com/top/babel-es7.jpg)
 
-*Babel ES6 / ES7 npm Skeleton*
+# Babel ES6 / ES7 npm Skeleton [![Javascript](https://badges.frapsoft.com/javascript/code/javascript.svg?v=100)](https://github.com/ellerbrock/javascript-badges/) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/ellerbrock/javascript-badges/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badges/) [![Gitter Chat](https://badges.gitter.im/frapsoft/frapsoft.svg)](https://gitter.im/frapsoft/frapsoft/)  
+
+*Babel ES6 / ES7 npm Skeleton for the brave coders lifing on the edge*
+
+## Whats inside?
+
+- Node optimized ES6 / ES7 transpilation with [Babel](https://github.com/babel/babel)
+- ES6+ aware minifier based on the Babel toolchain [babili](https://github.com/babel/babili)
+- generate Sourcemaps
+- Code monitoring and auto server restart with [nodemon](https://github.com/remy/nodemon)
+- Code Linting with [ESLint](https://github.com/eslint/eslint)
+- Javascript [Standard](https://github.com/feross/standard) Coding Style ready 
+- Debugging with [babel-node-debug](https://github.com/crabdude/babel-node-debug)
+- optimized npm scripts
 
 ## Ready, steady, go ...
 
@@ -26,13 +39,21 @@ To speed things up and avoid transpiling stuff which is already natively support
 
 `npm install --save-dev babel-preset-stage-0` - for ES7 Support
 
+## ES6+ aware Minifier
+
+*Lets minify our production stuff directly with Babel.*
+
+Repository: <https://github.com/babel/babili>
+
+`npm install --save-dev babili babel-preset-babili`
+
 ## gimme some more
 
 For more packages have a look at the <https://github.com/babel/babel/tree/master/packages> or read more about this topic on <https://babeljs.io/docs/plugins/#presets>
 
 ## package.json
 
-To avoid messing around with separate config files like .babelrc, .eslintrc.json and so on we can config all that stuff directly in our package.json file:
+To avoid messing around with separate config files like .babelrc, .eslintrc.json and so on we can put all that stuff directly in our package.json file:
 
 
 ```
@@ -42,7 +63,8 @@ To avoid messing around with separate config files like .babelrc, .eslintrc.json
   "babel": {
     "presets": [
       "es2015-node6",
-      "stage-0"
+      "stage-0",
+      "babili"
     ]
   },
   "eslintConfig": {
@@ -55,15 +77,21 @@ To avoid messing around with separate config files like .babelrc, .eslintrc.json
   "scripts": {
     "start": "nodemon $2 --exec babel-node",
     "debug": "nodemon $2 --exec babel-node --debug",
-    "compile": "babel src/ -d  dist/"
-  }
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "compile": "babel src -d dist",
+    "compile:sourcemaps": "babel -s true src -d dist"
+  },
 ```
 
 ## Lets run it!
 
 - `npm start ./src/index` - Run your Code via `nodemon` transpiled with `babel-node`
 - `npm run debug ./src/index` - Run and debug your Code
+- `npm run lint` - lint your Code with `eslint`
+- `npm run lint:fix` - lint and fix your Code with `eslint`
 - `npm run compile` - Transpile your ES6 Code with `babel`
+- `npm run compile:sourcemaps` - Transpile your ES6 Code with `babel` and create sourcemaps
 
 ## Debugging
 
@@ -82,7 +110,7 @@ to:
 
 `"debug": "babel-node-debug $2",`
 
-and run it via `npm run debug ./src/index.js`.
+and run it via `npm run debug ./src/index.js`
 
 
 ### Contact / Social Media
