@@ -22,8 +22,10 @@
     "debug": "nodemon $2 --exec babel-node --debug",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "compile": "babel src -d dist",
-    "compile:sourcemaps": "babel -s true src -d dist"
+    "build": "babel -s true src -d dist",
+    "serve": "node dist/index.js",
+    "test": "mocha -w -G -R spec 'tests' --compilers js:babel-register",
+    "report": "mocha -w -G -R mochawesome 'tests' --compilers js:babel-register"
   },
   "keywords": [
     "babel",
@@ -45,11 +47,15 @@
     "babel-preset-babili": "0.0.2",
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.14.0",
     "babili": "0.0.4",
+    "chai": "^3.5.0",
     "eslint": "^3.5.0",
     "eslint-config-standard": "^6.0.1",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
+    "mocha": "^3.0.2",
+    "mochawesome": "^1.5.2",
     "nodemon": "^1.10.2"
   }
 }

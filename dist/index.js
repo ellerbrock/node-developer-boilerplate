@@ -7,3 +7,4 @@ const dbCon=new Promise((a,b)=>{log(`Try connecting to database: ${dbConfig.serv
 // to use .finally() we still need to install a ES6-Shim:
 // https://www.npmjs.com/package/promise.prototype.finally
 log(`\r\nPromise Info: ${dbCon}`);
+//# sourceMappingURL=index.js.map

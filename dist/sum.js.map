@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/sum.js"],"names":["sum","a","b"],"mappings":"AAAA;;;;;AAEO,MAAMA,oBAAM,CAACC,CAAD,EAAIC,CAAJ,KAAUD,IAAIC,CAA1B","file":"sum.js","sourcesContent":["'use strict'\n\nexport const sum = (a, b) => a + b\n"]}
+{"version":3,"sources":["../src/sum.js"],"names":["sum","a","b"],"mappings":"AAAA,a,uDAEO,KAAMA,iBAAM,CAACC,CAAD,CAAIC,CAAJ,GAAUD,EAAIC,CAA1B","file":"sum.js","sourcesContent":["'use strict'\n\nexport const sum = (a, b) => a + b\n"]}

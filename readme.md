@@ -1,4 +1,4 @@
-![Babel ES7 npm](https://github.frapsoft.com/top/babel-es7.jpg)
+![Babel ES7 npm](https://github.frapsoft.com/top/babel-es7.jpg?v=101)
 
 # Babel ES6 / ES7 npm Skeleton [![Javascript](https://badges.frapsoft.com/javascript/code/javascript.svg?v=100)](https://github.com/ellerbrock/javascript-badges/) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/ellerbrock/javascript-badges/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badges/) [![Gitter Chat](https://badges.gitter.im/frapsoft/frapsoft.svg)](https://gitter.im/frapsoft/frapsoft/)  
 
@@ -8,12 +8,14 @@
 
 - Node optimized ES6 / ES7 transpilation with [Babel](https://github.com/babel/babel)
 - ES6+ aware minifier based on the Babel toolchain [babili](https://github.com/babel/babili)
-- generate Sourcemaps
 - Code monitoring and auto server restart with [nodemon](https://github.com/remy/nodemon)
+- ES6+ Testing via [babel-register](https://github.com/babel/babel/tree/master/packages/babel-register) with [Mocha](https://github.com/mochajs/mocha) & [Chai](https://github.com/chaijs/chai)
+- HTML Test Report via [mochawesome](https://github.com/adamgruber/mochawesome) 
 - Code Linting with [ESLint](https://github.com/eslint/eslint)
 - Javascript [Standard](https://github.com/feross/standard) Coding Style ready 
 - Debugging with [babel-node-debug](https://github.com/crabdude/babel-node-debug)
-- optimized npm scripts
+- Sourcemap generation
+- npm scripts to quickly run tasks
 
 ## Ready, steady, go ...
 
@@ -79,19 +81,30 @@ To avoid messing around with separate config files like .babelrc, .eslintrc.json
     "debug": "nodemon $2 --exec babel-node --debug",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "compile": "babel src -d dist",
-    "compile:sourcemaps": "babel -s true src -d dist"
+    "build": "babel -s true src -d dist",
+    "serve": "node dist/index.js",
+    "test": "mocha -w -G -R spec 'tests' --compilers js:babel-register",
+    "report": "mocha -w -G -R mochawesome 'tests' --compilers js:babel-register"
   },
 ```
 
+I added to `npm start` and `npm run debug` a argument ($2) to pass the location of the file. This allows you to quickly switch between different files without changing package.json. 
+
+Examples:
+
+In case you want to run `./src/index.js` you can pass `npm start src` without the need of index.js.
+To run `./src/app1.js` run `npm start src/app1` and so on ...
+
 ## Lets run it!
 
-- `npm start ./src/index` - Run your Code via `nodemon` transpiled with `babel-node`
-- `npm run debug ./src/index` - Run and debug your Code
-- `npm run lint` - lint your Code with `eslint`
-- `npm run lint:fix` - lint and fix your Code with `eslint`
-- `npm run compile` - Transpile your ES6 Code with `babel`
-- `npm run compile:sourcemaps` - Transpile your ES6 Code with `babel` and create sourcemaps
+- `npm start src` - execute code with life reload via `nodemon` transpiled with `babel-node`
+- `npm run debug src` - execute code with debug flag enabled
+- `npm run lint` - code linting with `eslint`
+- `npm run lint:fix` - fix problems automatically with `eslint`
+- `npm test` - run tests with `mocha` and `chai`
+- `npm run report` - create a graphical report for the tests with `mochasome`
+- `npm run build` - transpile ES6+ with `babel` and creates sourcemaps
+- `npm run server` - serve production files via `node`
 
 ## Debugging
 
@@ -110,7 +123,11 @@ to:
 
 `"debug": "babel-node-debug $2",`
 
-and run it via `npm run debug ./src/index.js`
+and run it via `npm run debug src/index.js`
+
+## Testing
+`npm install --save-dev mocha` - install `
+`npm install --save-dev babel-register
 
 
 ### Contact / Social Media
