@@ -46,13 +46,15 @@ _Lets minify our production stuff directly with Babel._
 
 Repository: <https://github.com/babel/babili>
 
-`npm install --save-dev babili babel-preset-babili`
+- `npm install --save-dev babili babel-preset-babili`
 
 ## Testing
 
 _Testing with `Mocha` and `Chai`, HTML Reports via `mochawesome`_
 
-`npm install --save-dev babel-register` - install `babel-register` for on the fly compilation `npm install --save-dev mocha chai` - install `mocha` and `chai` for testing `npm install --save-dev mochawesome` - install `mochawesome` to export tests results as html files
+- `npm install --save-dev babel-register` - install `babel-register` for on the fly compilation
+- `npm install --save-dev mocha chai` - install `mocha` and `chai` for testing
+- `npm install --save-dev mochawesome` - install `mochawesome` to export tests results as html files
 
 **Info:**
 
@@ -62,23 +64,23 @@ _The tests and benchmark stuff not really makes sence for a module that does not
 
 _Benchmark Testing with `Benchmark.js`_
 
-`npm install --save-dev benchmark microtime` - install `benchmark` and `microtime` for performance testing
+- `npm install --save-dev benchmark microtime` - install `benchmark` and `microtime` for performance testing
 
 ## Debugging
 
 At the moment of writing Node.js Version 6x is sadly not working with `node-inspector` in current Version 0.12.8\. Its a known issue i reported [here](https://github.com/node-inspector/node-inspector/issues/905#issuecomment-246203881). Hopefully when you read this its fixed for Node Version 6x and you can install `babel-node-debug` for debugging ... (no known issues for users with Node Version 4x and 5x).
 
-`npm install --save-dev babel-node-debug`
+- `npm install --save-dev babel-node-debug`
 
 In case everything works fine you can change the line in your package.json
 
 from:
 
-`"debug": "nodemon $2 --exec babel-node --debug",`
+- `"debug": "nodemon $2 --exec babel-node --debug",`
 
 to:
 
-`"debug": "babel-node-debug $2",`
+- `"debug": "babel-node-debug $2",`
 
 and run it via `npm run debug src` for a damn sweet debugging experience.
 
@@ -86,7 +88,8 @@ and run it via `npm run debug src` for a damn sweet debugging experience.
 
 _Run vulnerability tests via node security platform and update scans via `ncu`_
 
-`npm install --save-dev nsp` - install node security platform command-line tool `nsp` `npm install --save-dev npm-check-updates` - install `ncu` to check for the latest versions of the dependencies
+- `npm install --save-dev nsp` - install node security platform command-line tool `nsp`
+- `npm install --save-dev npm-check-updates` - install `ncu` to check for the latest versions of the dependencies
 
 ## gimme some more
 
