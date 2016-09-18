@@ -1,6 +1,8 @@
 ![Babel ES7 npm](https://github.frapsoft.com/top/babel-es7.jpg?v=101)
 
-# Babel ES6 / ES7 npm Skeleton [![Javascript](https://badges.frapsoft.com/javascript/code/javascript.svg?v=100)](https://github.com/ellerbrock/javascript-badges/) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/ellerbrock/javascript-badges/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badges/) [![Gitter Chat](https://badges.gitter.im/frapsoft/frapsoft.svg)](https://gitter.im/frapsoft/frapsoft/)
+# Babel ES6 / ES7 npm Skeleton
+
+[![Javascript](https://badges.frapsoft.com/javascript/code/javascript.svg?v=100)](https://github.com/ellerbrock/javascript-badges/) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/ellerbrock/javascript-badges/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badges/) [![Gitter Chat](https://badges.gitter.im/frapsoft/frapsoft.svg)](https://gitter.im/frapsoft/frapsoft/)
 
 _Babel ES6 / ES7 npm Skeleton for the brave coders lifing on the edge_
 
@@ -20,6 +22,8 @@ _Babel ES6 / ES7 npm Skeleton for the brave coders lifing on the edge_
 - Check for latest versions of dependencies via [ncu](https://github.com/tjunnone/npm-check-updates)
 - npm scripts to quickly run tasks
 
+![unicorn](http://i.giphy.com/3o85xBO5Rt4031bH44.gif)
+
 ## Ready, steady, go ...
 
 - `git init` - create a new git repository
@@ -29,7 +33,7 @@ _Babel ES6 / ES7 npm Skeleton for the brave coders lifing on the edge_
 
 ## ES6
 
-Node.js comes already with a huge set of ES6 features. A detailed list of supported features can be found at <http://node.green>. To speed things up and avoid transpiling stuff which is already natively supported via Node i recommend only installing the missing features for your current Node Version:
+[Node.js](https://github.com/nodejs/node) comes already with a huge set of ES6 features. A detailed list of supported features can be found at <http://node.green>. To speed things up and avoid transpiling stuff which is already natively supported via Node i recommend only installing the missing features for your current Node Version:
 
 - `npm install --save-dev babel-preset-es2015-node6` - Node.js Version 6x
 - `npm install --save-dev babel-preset-es2015-node5` - Node.js Version 5x
@@ -42,7 +46,7 @@ Node.js comes already with a huge set of ES6 features. A detailed list of suppor
 
 ## ES6+ aware Minifier
 
-_Lets minify our production stuff directly with Babel._
+_Lets minify our production stuff directly with [Babel](https://github.com/babel/babel)._
 
 Repository: <https://github.com/babel/babili>
 
@@ -50,7 +54,7 @@ Repository: <https://github.com/babel/babili>
 
 ## Testing
 
-_Testing with `Mocha` and `Chai`, HTML Reports via `mochawesome`_
+_Testing with [Mocha](https://github.com/mochajs/mocha) and [Chai](https://github.com/chaijs/chai), HTML Reports via [mochawesome](https://github.com/adamgruber/mochawesome)_
 
 - `npm install --save-dev babel-register` - install `babel-register` for on the fly compilation
 - `npm install --save-dev mocha chai` - install `mocha` and `chai` for testing
@@ -62,13 +66,13 @@ _The tests and benchmark stuff not really makes sence for a module that does not
 
 ## Benchmarking Suite
 
-_Benchmark Testing with `Benchmark.js`_
+_Benchmark Testing with [Benchmark.js](https://github.com/bestiejs/benchmark.js)_
 
 - `npm install --save-dev benchmark microtime` - install `benchmark` and `microtime` for performance testing
 
 ## Debugging
 
-At the moment of writing Node.js Version 6x is sadly not working with `node-inspector` in current Version 0.12.8\. Its a known issue i reported [here](https://github.com/node-inspector/node-inspector/issues/905#issuecomment-246203881). Hopefully when you read this its fixed for Node Version 6x and you can install `babel-node-debug` for debugging ... (no known issues for users with Node Version 4x and 5x).
+At the moment of writing Node.js Version 6x is sadly not working with [node-inspector/](https://github.com/node-inspector/node-inspector/). in current Version 0.12.8\. Its a known issue i reported [here](https://github.com/node-inspector/node-inspector/issues/905#issuecomment-246203881). Hopefully when you read this its fixed for Node Version 6x and you can install [babel-node-debug](https://github.com/crabdude/babel-node-debug) for debugging ... (no known issues for users with Node Version 4x and 5x).
 
 - `npm install --save-dev babel-node-debug`
 
@@ -88,8 +92,8 @@ and run it via `npm run debug src` for a damn sweet debugging experience.
 
 _Run vulnerability tests via node security platform and update scans via `ncu`_
 
-- `npm install --save-dev nsp` - install node security platform command-line tool `nsp`
-- `npm install --save-dev npm-check-updates` - install `ncu` to check for the latest versions of the dependencies
+- `npm install --save-dev nsp` - install node security platform command-line tool [nsp](https://github.com/nodesecurity/nsp)
+- `npm install --save-dev npm-check-updates` - install [ncu](https://github.com/tjunnone/npm-check-updates) to check for the latest versions of the dependencies
 
 ## gimme some more
 
