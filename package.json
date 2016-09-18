@@ -1,6 +1,6 @@
 {
   "name": "babel-es6-es7-npm-skeleton",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Babel NPM ES6 / ES7 Skeleton",
   "main": "./src/index.js",
   "babel": {
@@ -24,8 +24,13 @@
     "lint:fix": "eslint --fix src",
     "build": "babel -s true src -d dist",
     "serve": "node dist/index.js",
-    "test": "mocha -w -G -R spec 'tests' --compilers js:babel-register",
-    "report": "mocha -w -G -R mochawesome 'tests' --compilers js:babel-register"
+    "test": "mocha -c -S -R spec 'tests' --compilers js:babel-register --check-leaks",
+    "test:watch": "mocha -w -c -S -R spec 'tests' --compilers js:babel-register --check-leaks",
+    "test:reporter-nyan": "mocha -c -S -R nyan 'tests' --compilers js:babel-register --check-leaks",
+    "test:reporter-dot": "mocha -c -S -R dot 'tests' --compilers js:babel-register --check-leaks",
+    "test:reporter-list": "mocha -c -S -R list 'tests' --compilers js:babel-register --check-leaks",
+    "test:reporter-landing": "mocha -c -S -R landing 'tests' --compilers js:babel-register --check-leaks",
+    "test:export": "mocha -S -R mochawesome 'tests' --compilers js:babel-register --reporter-options reportDir=reports --check-leaks"
   },
   "keywords": [
     "babel",
