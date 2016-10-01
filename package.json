@@ -1,6 +1,6 @@
 {
   "name": "babel-es6-es7-npm-skeleton",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Babel NPM ES6 / ES7 Skeleton",
   "main": "./src/index.js",
   "babel": {
@@ -53,11 +53,11 @@
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-node-debug": "^2.0.0",
-    "babel-preset-babili": "0.0.2",
+    "babel-preset-babili": "0.0.4",
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.14.0",
-    "babili": "0.0.4",
+    "babili": "0.0.6",
     "benchmark": "^2.1.1",
     "chai": "^3.5.0",
     "eslint": "^3.5.0",

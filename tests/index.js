@@ -1,5 +1,5 @@
-import { sum } from  '../src/sum'
-import { expect } from 'chai'
+import sum  from  '../src/sum'
+import { expect }  from 'chai'
 
 describe('Example ES6+ Mocha / Chai Test', function () {
   let a = 1
@@ -19,6 +19,6 @@ describe('Example ES6+ Mocha / Chai Test', function () {
   })
 
   it(`expect: ${a} + ${b} = ${a + b}`, function () {
-    expect(sum(a, b)).to.eql(3)
+    expect(sum(a, b)).to.be.eql(3)
   })
 })

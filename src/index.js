@@ -1,6 +1,6 @@
 'use strict'
 
-import { sum } from './sum'
+import sum  from './sum'
 
 const log = console.log
 
@@ -20,4 +20,5 @@ const dbCon = new Promise((resolve, reject) => {
 // to use .finally() we still need to install a ES6-Shim:
 // https://www.npmjs.com/package/promise.prototype.finally
 
-log(`\r\nPromise Info: ${dbCon}`)
+log(`Promise Info: ${dbCon}`)
+
