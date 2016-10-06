@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Node.js / npm Boilerplate by ellerbrock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Node.js / npm Boilerplate</h1>
+      <h2 class="project-tagline">Babel ES6 / ES7 - Testing, Benchmark, Auto Reload, Linting</h2>
+      <a href="https://github.com/ellerbrock/node-npm-boilerplate" class="btn">View on GitHub</a>
+      <a href="https://github.com/ellerbrock/node-npm-boilerplate/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ellerbrock/node-npm-boilerplate/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><img src="https://github.frapsoft.com/top/babel-es7.jpg?v=101" alt="Babel ES7 npm"></p>
+
+<h1>
+<a id="babel-es6--es7-npm-skeleton" class="anchor" href="#babel-es6--es7-npm-skeleton" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Babel ES6 / ES7 npm Skeleton</h1>
+
+<p><a href="https://github.com/ellerbrock/javascript-badges/"><img src="https://badges.frapsoft.com/javascript/code/javascript.svg?v=100" alt="Javascript"></a> <a href="https://github.com/ellerbrock/javascript-badges/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="JavaScript Style Guide"></a> <a href="https://github.com/ellerbrock/open-source-badges/"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102" alt="Open Source Love"></a> <a href="https://gitter.im/frapsoft/frapsoft/"><img src="https://badges.gitter.im/frapsoft/frapsoft.svg" alt="Gitter Chat"></a></p>
+
+<p><em>Babel ES6 / ES7 npm Skeleton for the brave coders lifing on the edge</em></p>
+
+<h2>
+<a id="whats-inside" class="anchor" href="#whats-inside" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Whats inside?</h2>
+
+<ul>
+<li>Node optimized ES6 / ES7 transpilation with <a href="https://github.com/babel/babel">Babel</a>
+</li>
+<li>ES6+ aware minifier based on the Babel toolchain <a href="https://github.com/babel/babili">babili</a>
+</li>
+<li>Code monitoring and auto server restart with <a href="https://github.com/remy/nodemon">nodemon</a>
+</li>
+<li>ES6+ Testing via <a href="https://github.com/babel/babel/tree/master/packages/babel-register">babel-register</a> with <a href="https://github.com/mochajs/mocha">Mocha</a> &amp; <a href="https://github.com/chaijs/chai">Chai</a>
+</li>
+<li>HTML Test Report via <a href="https://github.com/adamgruber/mochawesome">mochawesome</a>
+</li>
+<li>Code Linting with <a href="https://github.com/eslint/eslint">ESLint</a>
+</li>
+<li>Benchmark Testing with <a href="https://github.com/bestiejs/benchmark.js">benchmark.js</a>
+</li>
+<li>Javascript <a href="https://github.com/feross/standard">Standard</a> Coding Style ready</li>
+<li>Debugging with <a href="https://github.com/crabdude/babel-node-debug">babel-node-debug</a>
+</li>
+<li>Sourcemap generation</li>
+<li>Vulnerability scan via <a href="https://github.com/nodesecurity/nsp">nsp</a>
+</li>
+<li>Check for latest versions of dependencies via <a href="https://github.com/tjunnone/npm-check-updates">ncu</a>
+</li>
+<li>npm scripts to quickly run tasks</li>
+</ul>
+
+<p><img src="http://i.giphy.com/3o85xBO5Rt4031bH44.gif" alt="unicorn"></p>
+
+<h2>
+<a id="ready-steady-go-" class="anchor" href="#ready-steady-go-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ready, steady, go ...</h2>
+
+<ul>
+<li>
+<code>git init</code> - create a new git repository</li>
+<li>
+<code>npm init -y</code> - create a initial package.json</li>
+<li>
+<code>npm install --save-dev babel-cli nodemon eslint</code> - install development dependencies</li>
+<li>
+<code>eslint --init</code> - setup your ESLint Style (in my case JS Standard)</li>
+</ul>
+
+<h2>
+<a id="es6" class="anchor" href="#es6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ES6</h2>
+
+<p><a href="https://github.com/nodejs/node">Node.js</a> comes already with a huge set of ES6 features. A detailed list of supported features can be found at <a href="http://node.green">http://node.green</a>. To speed things up and avoid transpiling stuff which is already natively supported via Node i recommend only installing the missing features for your current Node Version:</p>
+
+<ul>
+<li>
+<code>npm install --save-dev babel-preset-es2015-node6</code> - Node.js Version 6x</li>
+<li>
+<code>npm install --save-dev babel-preset-es2015-node5</code> - Node.js Version 5x</li>
+<li>
+<code>npm install --save-dev babel-preset-es2015-node4</code> - Node.js Version 4x</li>
+<li>
+<code>npm install --save-dev babel-preset-es2015</code> - for all Node.js Versions</li>
+</ul>
+
+<h2>
+<a id="es7" class="anchor" href="#es7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ES7</h2>
+
+<p><code>npm install --save-dev babel-preset-stage-0</code> - for ES7 Support</p>
+
+<h2>
+<a id="es6-aware-minifier" class="anchor" href="#es6-aware-minifier" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ES6+ aware Minifier</h2>
+
+<p><em>Lets minify our production stuff directly with <a href="https://github.com/babel/babel">Babel</a>.</em></p>
+
+<p>Repository: <a href="https://github.com/babel/babili">https://github.com/babel/babili</a></p>
+
+<ul>
+<li><code>npm install --save-dev babili babel-preset-babili</code></li>
+</ul>
+
+<h2>
+<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing</h2>
+
+<p><em>Testing with <a href="https://github.com/mochajs/mocha">Mocha</a> and <a href="https://github.com/chaijs/chai">Chai</a>, HTML Reports via <a href="https://github.com/adamgruber/mochawesome">mochawesome</a></em></p>
+
+<ul>
+<li>
+<code>npm install --save-dev babel-register</code> - install <code>babel-register</code> for on the fly compilation</li>
+<li>
+<code>npm install --save-dev mocha chai</code> - install <code>mocha</code> and <code>chai</code> for testing</li>
+<li>
+<code>npm install --save-dev mochawesome</code> - install <code>mochawesome</code> to export tests results as html files</li>
+</ul>
+
+<p><strong>Info:</strong></p>
+
+<p><em>The tests and benchmark stuff not really makes sence for a module that does nothing more then return a + b without any further checks. Its just a simple demonstration how to use the frameworks and tools with minimal example code to get you quick up and running. For further learning and better integration for your needs you should read more in detail about that stuff on the project pages.</em></p>
+
+<h2>
+<a id="benchmarking-suite" class="anchor" href="#benchmarking-suite" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Benchmarking Suite</h2>
+
+<p><em>Benchmark Testing with <a href="https://github.com/bestiejs/benchmark.js">Benchmark.js</a></em></p>
+
+<ul>
+<li>
+<code>npm install --save-dev benchmark microtime</code> - install <code>benchmark</code> and <code>microtime</code> for performance testing</li>
+</ul>
+
+<h2>
+<a id="debugging" class="anchor" href="#debugging" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Debugging</h2>
+
+<p>At the moment of writing Node.js Version 6x is sadly not working with <a href="https://github.com/node-inspector/node-inspector/">node-inspector/</a>. in current Version 0.12.8. Its a known issue i reported <a href="https://github.com/node-inspector/node-inspector/issues/905#issuecomment-246203881">here</a>. Hopefully when you read this its fixed for Node Version 6x and you can install <a href="https://github.com/crabdude/babel-node-debug">babel-node-debug</a> for debugging ... (no known issues for users with Node Version 4x and 5x).</p>
+
+<ul>
+<li><code>npm install --save-dev babel-node-debug</code></li>
+</ul>
+
+<p>In case everything works fine you can change the line in your package.json</p>
+
+<p>from:</p>
+
+<ul>
+<li><code>"debug": "nodemon $2 --exec babel-node --debug",</code></li>
+</ul>
+
+<p>to:</p>
+
+<ul>
+<li><code>"debug": "babel-node-debug $2",</code></li>
+</ul>
+
+<p>and run it via <code>npm run debug src</code> for a damn sweet debugging experience.</p>
+
+<h2>
+<a id="security--updates" class="anchor" href="#security--updates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Security &amp; Updates</h2>
+
+<p><em>Run vulnerability tests via node security platform and update scans via <code>ncu</code></em></p>
+
+<ul>
+<li>
+<code>npm install --save-dev nsp</code> - install node security platform command-line tool <a href="https://github.com/nodesecurity/nsp">nsp</a>
+</li>
+<li>
+<code>npm install --save-dev npm-check-updates</code> - install <a href="https://github.com/tjunnone/npm-check-updates">ncu</a> to check for the latest versions of the dependencies</li>
+</ul>
+
+<h2>
+<a id="gimme-some-more" class="anchor" href="#gimme-some-more" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>gimme some more</h2>
+
+<p>For more packages have a look at the <a href="https://github.com/babel/babel/tree/master/packages">https://github.com/babel/babel/tree/master/packages</a> or read more about this topic on <a href="https://babeljs.io/docs/plugins/#presets">https://babeljs.io/docs/plugins/#presets</a></p>
+
+<h2>
+<a id="packagejson" class="anchor" href="#packagejson" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>package.json</h2>
+
+<p>To avoid messing around with separate config files like .babelrc, .eslintrc.json and so on we can put all that stuff directly in our package.json file:</p>
+
+<pre><code>{
+  "name": "your-awesome-module",
+  "version": "0.0.1",
+  "babel": {
+    "presets": [
+      "es2015-node6",
+      "stage-0",
+      "babili"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "plugins": [
+      "standard",
+      "promise"
+    ]
+  },
+  "scripts": {
+    "start": "nodemon $2 --exec babel-node",
+    "debug": "nodemon $2 --exec babel-node --debug",
+    "benchmark": "babel-node benchmark",
+    "benchmark:watch": "nodemon $2 --exec babel-node benchmark",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "build": "babel -s true src -d dist",
+    "serve": "node dist/index.js",
+    "test": "mocha -c -S -R spec 'tests' --compilers js:babel-register --check-leaks",
+    "test:watch": "mocha -w -c -S -R spec 'tests' --compilers js:babel-register --check-leaks",
+    "test:reporter-nyan": "mocha -c -S -R nyan 'tests' --compilers js:babel-register --check-leaks",
+    "test:reporter-dot": "mocha -c -S -R dot 'tests' --compilers js:babel-register --check-leaks",
+    "test:reporter-list": "mocha -c -S -R list 'tests' --compilers js:babel-register --check-leaks",
+    "test:reporter-landing": "mocha -c -S -R landing 'tests' --compilers js:babel-register --check-leaks",
+    "test:export": "mocha -S -R mochawesome 'tests' --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
+    "scan:security": "nsp check",
+    "scan:updates": "ncu"
+  },
+</code></pre>
+
+<p>I added to <code>npm start</code> and <code>npm run debug</code> a argument ($2) to pass the location of the file. This allows you to quickly switch between different files without changing package.json.</p>
+
+<p>Examples:</p>
+
+<p>In case you want to run <code>./src/index.js</code> you can pass <code>npm start src</code> without the need of index.js. To run <code>./src/app1.js</code> run <code>npm start src/app1</code> and so on ...</p>
+
+<h2>
+<a id="lets-run-it" class="anchor" href="#lets-run-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lets run it!</h2>
+
+<ul>
+<li>
+<code>npm start src</code> - execute code with life reload via <code>nodemon</code> transpiled with <code>babel-node</code>
+</li>
+<li>
+<code>npm run debug src</code> - execute code with debug flag enabled</li>
+<li>
+<code>npm run benchmark</code> - run benchmark tests with <code>benchmark.js</code>
+</li>
+<li>
+<code>npm run benchmark:watch</code> - run benchmark tests with <code>benchmark.js</code> and watch for file changes</li>
+<li>
+<code>npm run lint</code> - code linting with <code>eslint</code>
+</li>
+<li>
+<code>npm run lint:fix</code> - fix problems automatically with <code>eslint</code>
+</li>
+<li>
+<code>npm test</code> - run tests with <code>mocha</code> and <code>chai</code> with spec as reporter</li>
+<li>
+<code>npm run test:watch</code> - run tests with <code>mocha</code> and <code>chai</code> and watch for changes</li>
+<li>
+<code>npm run test:reporter-nyan</code> - run tests with <code>mocha</code> and <code>chai</code> with <code>nyan</code> reporter</li>
+<li>
+<code>npm run test:reporter-dot</code> - run tests with <code>mocha</code> and <code>chai</code> with <code>dot</code> reporter</li>
+<li>
+<code>npm run test:reporter-list</code> - run tests with <code>mocha</code> and <code>chai</code> with <code>list</code> reporter</li>
+<li>
+<code>npm run test:reporter-landing</code> - run tests with <code>mocha</code> and <code>chai</code> with <code>landing</code> reporter</li>
+<li>
+<code>npm run test:export</code> - export tests results as html files in the <code>./reports</code> folder via <code>mochasome</code>
+</li>
+<li>
+<code>npm run build</code> - transpile and minify ES6+ code and create sourcemaps with <code>babel</code> &amp; <code>babili</code>
+</li>
+<li>
+<code>npm run server</code> - serve production files from the <code>./dist</code> folder via <code>node</code>
+</li>
+<li>
+<code>npm run scan:security</code> - run vulnerability tests via the node security platform <code>nsp</code>
+</li>
+<li>
+<code>npm run scan:updates</code> - check for latest versions of dependencies via <code>ncu</code>
+</li>
+</ul>
+
+<h3>
+<a id="contact--social-media" class="anchor" href="#contact--social-media" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact / Social Media</h3>
+
+<p><em>Get the latest News about Web Development, Open Source, Tooling, Server &amp; Security</em></p>
+
+<p><a href="https://twitter.com/frapsoft/"><img src="https://github.frapsoft.com/social/twitter.png" alt="Twitter"></a><a href="https://www.facebook.com/frapsoft/"><img src="https://github.frapsoft.com/social/facebook.png" alt="Facebook"></a><a href="https://plus.google.com/116540931335841862774"><img src="https://github.frapsoft.com/social/google-plus.png" alt="Google+"></a><a href="https://gitter.im/frapsoft/frapsoft/"><img src="https://github.frapsoft.com/social/gitter.png" alt="Gitter"></a><a href="https://github.com/ellerbrock/"><img src="https://github.frapsoft.com/social/github.png" alt="Github"></a></p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p>Copyright (c) 2016 <a href="https://github.com/ellerbrock/">Maik Ellerbrock</a></p>
+
+<p><a href="https://opensource.org/licenses/mit-license.php"><img src="https://badges.frapsoft.com/os/mit/mit-125x28.png?v=102" alt="MIT Licence"></a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ellerbrock/node-npm-boilerplate">Node.js / npm Boilerplate</a> is maintained by <a href="https://github.com/ellerbrock">ellerbrock</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
