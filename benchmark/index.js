@@ -19,10 +19,10 @@ suite
   })
   // add listeners
   .on('cycle', function (event) {
-    console.log(String(event.target));
+    console.log(String(event.target))
   })
   .on('complete', function () {
     console.log('Fastest is ' + this.filter('fastest').map('name'));
   })
   // run async
-  .run({ 'async': true });
+  .run({ 'async': true })

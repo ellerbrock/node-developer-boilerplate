@@ -164,7 +164,7 @@ In case you want to run `./src/index.js` you can pass `npm start src` without th
 - `npm run test:reporter-landing` - run tests with `mocha` and `chai` with `landing` reporter
 - `npm run test:export` - export tests results as html files in the `./reports` folder via `mochasome`
 - `npm run build` - transpile and minify ES6+ code and create sourcemaps with `babel` & `babili`
-- `npm run server` - serve production files from the `./dist` folder via `node`
+- `npm run serve` - serve production files from the `./dist` folder via `node`
 - `npm run scan:security` - run vulnerability tests via the node security platform `nsp`
 - `npm run scan:updates` - check for latest versions of dependencies via `ncu`
 

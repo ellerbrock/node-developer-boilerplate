@@ -1,8 +1,56 @@
 {
-  "name": "babel-es6-es7-npm-skeleton",
-  "version": "0.1.3",
-  "description": "Babel NPM ES6 / ES7 Skeleton",
-  "main": "./src/index.js",
+  "name": "node-npm-boilerplate",
+  "description": "Boilerplate for Node and npm Developer",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ellerbrock/node-npm-boilerplate.git"
+  },
+  "author": "Maik Ellerbrock <opensource@frapsoft.com> (https://github.com/ellerbrock)",
+  "homepage": "https://ellerbrock.github.io/node-npm-boilerplate",
+  "license": "MIT",
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ellerbrock/node-npm-boilerplate/issues"
+  },
+  "scripts": {
+    "benchmark": "babel-node benchmark",
+    "benchmark:watch": "nodemon $2 --exec babel-node benchmark",
+    "build": "babel -s true src -d dist",
+    "clean": "shx rm -rf dist",
+    "debug": "nodemon $2 --exec babel-node --debug",
+    "git:add": "git add --all && git status",
+    "git:commit": "git-cz",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "scan:security": "nsp check",
+    "scan:updates": "ncu",
+    "serve": "node dist",
+    "start": "nodemon $2 --exec babel-node",
+    "test": "mocha -c -S -R spec 'tests' --compilers js:babel-register --check-leaks",
+    "test:export": "mocha -S -R mochawesome 'tests' --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
+    "test:watch": "mocha -w -c -S -R spec 'tests' --compilers js:babel-register --check-leaks"
+  },
+  "devDependencies": {
+    "babel-cli": "6.16.0",
+    "babel-node-debug": "2.0.0",
+    "babel-preset-babili": "0.0.5",
+    "babel-preset-es2015-node6": "0.3.0",
+    "babel-preset-stage-0": "6.16.0",
+    "babel-register": "6.16.3",
+    "babili": "0.0.7",
+    "benchmark": "2.1.1",
+    "chai": "3.5.0",
+    "commitizen": "2.8.6",
+    "eslint": "3.7.1",
+    "eslint-config-standard": "6.2.0",
+    "eslint-plugin-promise": "3.0.0",
+    "eslint-plugin-standard": "2.0.1",
+    "mocha": "3.1.1",
+    "nodemon": "1.11.0",
+    "npm-check-updates": "2.8.5",
+    "shx": "0.1.4"
+  },
   "babel": {
     "presets": [
       "es2015-node6",
@@ -16,59 +64,5 @@
       "standard",
       "promise"
     ]
-  },
-  "scripts": {
-    "start": "nodemon $2 --exec babel-node",
-    "debug": "nodemon $2 --exec babel-node --debug",
-    "benchmark": "babel-node benchmark",
-    "benchmark:watch": "nodemon $2 --exec babel-node benchmark",
-    "lint": "eslint src",
-    "lint:fix": "eslint --fix src",
-    "build": "babel -s true src -d dist",
-    "serve": "node dist/index.js",
-    "test": "mocha -c -S -R spec 'tests' --compilers js:babel-register --check-leaks",
-    "test:watch": "mocha -w -c -S -R spec 'tests' --compilers js:babel-register --check-leaks",
-    "test:reporter-nyan": "mocha -c -S -R nyan 'tests' --compilers js:babel-register --check-leaks",
-    "test:reporter-dot": "mocha -c -S -R dot 'tests' --compilers js:babel-register --check-leaks",
-    "test:reporter-list": "mocha -c -S -R list 'tests' --compilers js:babel-register --check-leaks",
-    "test:reporter-landing": "mocha -c -S -R landing 'tests' --compilers js:babel-register --check-leaks",
-    "test:export": "mocha -S -R mochawesome 'tests' --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
-    "scan:security": "nsp check",
-    "scan:updates": "ncu"
-  },
-  "keywords": [
-    "babel",
-    "npm",
-    "skeleton",
-    "es6",
-    "es7"
-  ],
-  "author": "Maik Ellerbrock <opensource@frapsoft.com> (https://github.com/ellerbrock)",
-  "homepage": "https://github.com/ellerbrock/babel-es6-es7-npm-skeleton#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ellerbrock/babel-es6-es7-npm-skeleton.git"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-node-debug": "^2.0.0",
-    "babel-preset-babili": "0.0.4",
-    "babel-preset-es2015-node6": "^0.3.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "babel-register": "^6.16.3",
-    "babili": "0.0.6",
-    "benchmark": "^2.1.1",
-    "chai": "^3.5.0",
-    "eslint": "^3.7.1",
-    "eslint-config-standard": "^6.2.0",
-    "eslint-plugin-promise": "^2.0.1",
-    "eslint-plugin-standard": "^2.0.1",
-    "microtime": "^2.1.1",
-    "mocha": "^3.1.0",
-    "mochawesome": "^1.5.3",
-    "nodemon": "^1.10.2",
-    "npm-check-updates": "^2.8.2",
-    "nsp": "^2.6.2"
   }
 }
