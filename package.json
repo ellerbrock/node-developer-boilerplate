@@ -1,5 +1,6 @@
 {
   "name": "node-npm-boilerplate",
+  "version": "0.2.1",
   "description": "Boilerplate for Node and npm Developer",
   "main": "src/index.js",
   "repository": {
@@ -23,9 +24,14 @@
     "git:commit": "git-cz",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
+    "postrelease": "npm run setenv:dev",
+    "prerelease": "npm run clean && npm run lint:fix && npm run scan:security && npm run setenv:prod && npm run build",
+    "release": "standard-version",
     "scan:security": "nsp check",
     "scan:updates": "ncu",
     "serve": "node dist",
+    "setenv:dev": "npm config set production false",
+    "setenv:prod": "npm config set production true",
     "start": "nodemon $2 --exec babel-node",
     "test": "mocha -c -S -R spec 'tests' --compilers js:babel-register --check-leaks",
     "test:export": "mocha -S -R mochawesome 'tests' --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
@@ -46,10 +52,12 @@
     "eslint-config-standard": "6.2.0",
     "eslint-plugin-promise": "3.0.0",
     "eslint-plugin-standard": "2.0.1",
-    "mocha": "3.1.1",
+    "mocha": "3.1.2",
     "nodemon": "1.11.0",
     "npm-check-updates": "2.8.5",
-    "shx": "0.1.4"
+    "shx": "0.1.4",
+    "standard-changelog": "0.0.1",
+    "standard-version": "3.0.0"
   },
   "babel": {
     "presets": [
@@ -64,5 +72,13 @@
       "standard",
       "promise"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/standard-changelog"
+    }
+  },
+  "dependencies": {
+    "standard-changelog": "0.0.1"
   }
 }
