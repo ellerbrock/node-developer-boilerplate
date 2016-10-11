@@ -1,6 +1,6 @@
 'use strict'
 
-import sum  from './sum'
+import sum from './sum'
 
 const log = console.log
 
