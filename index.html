@@ -58,6 +58,8 @@
 </li>
 <li>Generate a changelog from git metadata with angular <a href="https://github.com/conventional-changelog/standard-changelog">commit convention</a>
 </li>
+<li>Semantic Releasing via <a href="https://github.com/conventional-changelog/standard-version">Standard Version</a>
+</li>
 <li>Cross platform script support via <a href="https://github.com/shelljs/shx">Shell.js / shx</a>
 </li>
 <li>npm scripts to quickly run tasks</li>
@@ -101,6 +103,9 @@ npm install
 <code>npm run lint:fix</code> - fix problems automatically with <code>eslint</code>
 </li>
 <li>
+<code>npm run release</code> - Automatic versioning and CHANGELOG management via <code>Standard Version</code>
+</li>
+<li>
 <code>npm run scan:security</code> - run vulnerability tests via the node security platform <code>nsp</code>
 </li>
 <li>
@@ -139,6 +144,9 @@ npm install
     "git:commit": "git-cz",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
+    "postrelease": "npm run setenv:dev",
+    "prerelease": "npm run clean &amp;&amp; npm run lint:fix &amp;&amp; npm run scan:security &amp;&amp; npm run setenv:prod &amp;&amp; npm run build",
+    "release": "standard-version",
     "scan:security": "nsp check",
     "scan:updates": "ncu",
     "serve": "node dist",
