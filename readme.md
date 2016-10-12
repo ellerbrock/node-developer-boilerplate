@@ -31,12 +31,21 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, Benchmarking, Deb
 ![unicorn](http://i.giphy.com/3o85xBO5Rt4031bH44.gif)
 
 
-## Quickstart
+## Quickstart (npm)
 
 ```
 git clone https://github.com/ellerbrock/node-npm-boilerplate
 cd node-npm-boilerplate
 npm install
+```
+
+
+## Quickstart (yarn)
+
+```
+git clone https://github.com/ellerbrock/node-npm-boilerplate
+cd node-npm-boilerplate
+yarn
 ```
 
 ## Scripts

@@ -21,7 +21,8 @@
     "clean": "shx rm -rf dist",
     "debug": "nodemon $2 --exec babel-node --debug",
     "git:add": "git add --all && git status",
-    "git:commit": "git-cz",
+    "git:commit": "npm run git:add && git-cz",
+    "git:push": "git push --follow-tags",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "postrelease": "npm run setenv:dev",
@@ -57,6 +58,7 @@
     "mochawesome": "1.5.3",
     "nodemon": "1.11.0",
     "npm-check-updates": "2.8.5",
+    "nsp": "2.6.2",
     "shx": "0.1.4",
     "standard-changelog": "0.0.1",
     "standard-version": "3.0.0"
@@ -74,10 +76,5 @@
       "standard",
       "promise"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/standard-changelog"
-    }
   }
 }
