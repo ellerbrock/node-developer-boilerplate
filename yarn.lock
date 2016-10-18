@@ -45,8 +45,8 @@ ajv-keywords@^1.0.0:
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.1.1.tgz#02550bc605a3e576041565628af972e06c549d50"
 
 ajv@^4.7.0:
-  version "4.7.7"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.7.7.tgz#4980d5f65ce90a2579532eec66429f320dea0321"
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.8.0.tgz#011df5c4a08edb29574a477269afb15a6f97abe5"
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -792,8 +792,8 @@ babili@0.0.7:
     babel-preset-babili "^0.0.5"
 
 babylon@^6.11.0:
-  version "6.11.5"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.11.5.tgz#35cce8fb5f98353931d275cb56871fbf17bf9a00"
+  version "6.12.0"
+  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.12.0.tgz#953e6202e58062f7f5041fc8037e4bd4e17140a9"
 
 balanced-match@^0.4.1:
   version "0.4.2"
@@ -1006,8 +1006,8 @@ chalk@1.1.1:
     supports-color "^2.0.0"
 
 chokidar@^1.0.0, chokidar@^1.4.3:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.6.0.tgz#90c32ad4802901d7713de532dc284e96a63ad058"
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.6.1.tgz#2f4447ab5e96e50fb3d789fd90d4c72e0e4c70c2"
   dependencies:
     anymatch "^1.3.0"
     async-each "^1.0.0"
@@ -1383,8 +1383,8 @@ conventional-commits-parser@^0.1.2:
     trim-off-newlines "^1.0.0"
 
 conventional-commits-parser@^1.0.0, conventional-commits-parser@^1.0.1:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/conventional-commits-parser/-/conventional-commits-parser-1.2.3.tgz#fc42492d1502fa3b307c1a8e45a8c5b0932fc322"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/conventional-commits-parser/-/conventional-commits-parser-1.3.0.tgz#e327b53194e1a7ad5dc63479ee9099a52b024865"
   dependencies:
     is-text-path "^1.0.0"
     JSONStream "^1.0.4"
@@ -1580,8 +1580,8 @@ diff@1.4.0:
   resolved "https://registry.yarnpkg.com/diff/-/diff-1.4.0.tgz#7f28d2eb9ee7b15a97efd89ce63dcfdaa3ccbabf"
 
 doctrine@^1.2.2:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.4.0.tgz#e2db32defa752407b935b381e89f3740e469e599"
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
   dependencies:
     esutils "^2.0.2"
     isarray "^1.0.0"
@@ -1726,9 +1726,9 @@ eslint-plugin-standard@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-2.0.1.tgz#3589699ff9c917f2c25f76a916687f641c369ff3"
 
-eslint@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.7.1.tgz#7faa84599e0fea422f04bc32db49054051a3f11a"
+eslint@3.8.1:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.8.1.tgz#7d02db44cd5aaf4fa7aa489e1f083baa454342ba"
   dependencies:
     chalk "^1.1.3"
     concat-stream "^1.4.6"
@@ -1752,7 +1752,7 @@ eslint@3.7.1:
     lodash "^4.0.0"
     mkdirp "^0.5.0"
     natural-compare "^1.4.0"
-    optionator "^0.8.1"
+    optionator "^0.8.2"
     path-is-inside "^1.0.1"
     pluralize "^1.2.1"
     progress "^1.1.8"
@@ -2453,8 +2453,8 @@ infinity-agent@^2.0.0:
   resolved "https://registry.yarnpkg.com/infinity-agent/-/infinity-agent-2.0.3.tgz#45e0e2ff7a9eb030b27d62b74b3744b7a7ac4216"
 
 inflight@^1.0.4, inflight@~1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/inflight/-/inflight-1.0.5.tgz#db3204cd5a9de2e6cd890b85c6e2f66bcf4f620a"
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
   dependencies:
     once "^1.3.0"
     wrappy "1"
@@ -2588,6 +2588,10 @@ is-fullwidth-code-point@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz#ef9e31386f031a7f0d643af82fde50c457ef00cb"
   dependencies:
     number-is-nan "^1.0.0"
+
+is-fullwidth-code-point@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
 
 is-glob@^2.0.0, is-glob@^2.0.1:
   version "2.0.1"
@@ -3621,7 +3625,7 @@ optimist@~0.3.5:
   dependencies:
     wordwrap "~0.0.2"
 
-optionator@^0.8.1:
+optionator@^0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/optionator/-/optionator-0.8.2.tgz#364c5e409d3f4d6301d6c0b4c05bba50180aeb64"
   dependencies:
@@ -4291,8 +4295,8 @@ sorted-object@~2.0.1:
   resolved "https://registry.yarnpkg.com/sorted-object/-/sorted-object-2.0.1.tgz#7d631f4bd3a798a24af1dffcfbfe83337a5df5fc"
 
 source-map-support@^0.4.2:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.3.tgz#693c8383d4389a4569486987c219744dfc601685"
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.5.tgz#4438df4219e1b3c7feb674614b4c67f9722db1e4"
   dependencies:
     source-map "^0.5.3"
 
@@ -4436,6 +4440,13 @@ string-width@^1.0.1, string-width@^1.0.2:
     is-fullwidth-code-point "^1.0.0"
     strip-ansi "^3.0.0"
 
+string-width@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-2.0.0.tgz#635c5436cc72a6e0c387ceca278d4e2eec52687e"
+  dependencies:
+    is-fullwidth-code-point "^2.0.0"
+    strip-ansi "^3.0.0"
+
 stringstream@~0.0.4:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/stringstream/-/stringstream-0.0.5.tgz#4e484cd4de5a0bbbee18e46307710a8a81621878"
@@ -4477,8 +4488,8 @@ strong-data-uri@^1.0.0:
     truncate "~1.0.2"
 
 subcommand@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/subcommand/-/subcommand-2.0.3.tgz#9b3fd1a753e3c441f00410cb44131d8655f52c32"
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/subcommand/-/subcommand-2.0.4.tgz#71cd54bd83a78a0b266296cda3f9428e91d66b14"
   dependencies:
     cliclopts "^1.1.0"
     debug "^2.1.3"
@@ -4496,15 +4507,15 @@ supports-color@3.1.2:
     has-flag "^1.0.0"
 
 table@^3.7.8:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/table/-/table-3.8.0.tgz#252166c7f3286684a9d561b0f3a8929caf3a997b"
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/table/-/table-3.8.2.tgz#47726825bdd73de25aa3fda1c28910ca999c95cc"
   dependencies:
     ajv "^4.7.0"
     ajv-keywords "^1.0.0"
     chalk "^1.1.1"
     lodash "^4.0.0"
     slice-ansi "0.0.4"
-    string-width "^1.0.1"
+    string-width "^2.0.0"
 
 tar-pack@~3.1.0:
   version "3.1.4"
@@ -4961,9 +4972,10 @@ yargs@^3.9.0:
     y18n "^3.2.0"
 
 yargs@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-6.0.0.tgz#900479df4e8bf6ab0e87216f5ed2b2760b968345"
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-6.2.0.tgz#9001048953def85495a2ce1dcfa690b7ab060fd1"
   dependencies:
+    camelcase "^3.0.0"
     cliui "^3.2.0"
     decamelize "^1.1.1"
     get-caller-file "^1.0.1"
