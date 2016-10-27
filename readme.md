@@ -28,6 +28,8 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, Benchmarking, Deb
 - Cross platform script support via [Shell.js / shx](https://github.com/shelljs/shx)
 - npm scripts to quickly run tasks
 
+**Info:** A yarn version with the same setup is available here: [yarn-node-boilerplate](https://github.com/ellerbrock/yarn-node-boilerplate)
+
 ![unicorn](http://i.giphy.com/3o85xBO5Rt4031bH44.gif)
 
 
