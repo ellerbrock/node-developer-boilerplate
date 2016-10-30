@@ -1,4 +1,4 @@
-![Node Developer Boilerplate](https://ellerbrock.github.io/node-developer-boilerplate?v=101)
+![Node Developer Boilerplate](https://github.frapsoft.com/top/babel-es7.jpg?v=101)
 
 # Node Developer Boilerplate
 
@@ -9,7 +9,12 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 
 ## Project Status
 
-[![Build Status](https://travis-ci.org/ellerbrock/node-developer-boilerplate.svg?branch=master)](https://travis-ci.org/ellerbrock/node-developer-boilerplate) [![codecov](https://codecov.io/gh/ellerbrock/node-developer-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/ellerbrock/node-developer-boilerplate) ![vulnerbilities](https://snyk.io/test/github/ellerbrock/node-developer-boilerplate/badge.svg) ![dependencies](https://david-dm.org/ellerbrock/node-developer-boilerplate.svg)
+[![codecov](https://codecov.io/gh/ellerbrock/node-developer-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/ellerbrock/node-developer-boilerplate) ![dependencies](https://david-dm.org/ellerbrock/node-developer-boilerplate.svg)
+
+<!--
+[![Build Status](https://travis-ci.org/ellerbrock/node-developer-boilerplate.svg?branch=master)](https://travis-ci.org/ellerbrock/node-developer-boilerplate) 
+![vulnerbilities](https://snyk.io/test/github/ellerbrock/node-developer-boilerplate/badge.svg)
+-->
 
 ## Whats inside?
 
@@ -139,24 +144,40 @@ yarn
 To avoid messing around with separate config files like .babelrc, .eslintrc.json and others we can put all that stuff directly in our package.json file:
 
 ```
-{
-  "name": "your-awesome-module",
-  "version": "0.0.1",
-  "babel": {
-    "presets": [
-      "es2015-node6",
-      "stage-0",
-      "babili"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "standard",
-    "plugins": [
-      "standard",
-      "promise"
-    ]
-  } 
-  ...
+{"files": [
+     "dist",
+     "readme.md"
+   ],
+   "config": {
+     "commitizen": {
+       "path": "./node_modules/standard-changelog"
+     },
+     "ghooks": {
+       "pre-commit": "npm run clean && npm run lint:fix && npm test && npm run coverage && npm run build"
+     }
+   },
+   "babel": {
+     "presets": [
+       "es2015-node6",
+       "stage-0"
+     ],
+     "env": {
+       "production": {
+         "presets": [
+           "babili"
+         ]
+       }
+     }
+   },
+   "eslintConfig": {
+     "extends": "standard",
+     "installedESLint": true,
+     "plugins": [
+       "standard",
+       "promise"
+     ]
+   },
+   "snyk": true
 ```
 
 
