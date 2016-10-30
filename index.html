@@ -13,20 +13,27 @@
     <section class="page-header">
       <h1 class="project-name">Node.js / npm Boilerplate</h1>
       <h2 class="project-tagline">Babel ES6 / ES7 - Testing, Benchmark, Auto Reload, Linting</h2>
-      <a href="https://github.com/ellerbrock/node-npm-boilerplate" class="btn">View on GitHub</a>
-      <a href="https://github.com/ellerbrock/node-npm-boilerplate/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/ellerbrock/node-npm-boilerplate/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="https://github.com/ellerbrock/node-developer-boilerplate" class="btn">View on GitHub</a>
+      <a href="https://github.com/ellerbrock/node-developer-boilerplate/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ellerbrock/node-developer-boilerplate/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
-      <p><img src="https://github.frapsoft.com/top/babel-es7.jpg?v=101" alt="Babel ES7 npm"></p>
+      <p><img src="https://github.frapsoft.com/top/babel-es7.jpg?v=101" alt="Node Developer Boilerplate"></p>
 
 <h1>
-<a id="babel-es6--es7-npm-skeleton" class="anchor" href="#babel-es6--es7-npm-skeleton" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Babel ES6 / ES7 npm Skeleton</h1>
+<a id="node-developer-boilerplate" class="anchor" href="#node-developer-boilerplate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Node Developer Boilerplate</h1>
 
 <p><a href="https://github.com/ellerbrock/javascript-badges/"><img src="https://badges.frapsoft.com/javascript/code/javascript.svg?v=100" alt="Javascript"></a> <a href="https://github.com/ellerbrock/javascript-badges/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="JavaScript Style Guide"></a> <a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"></a> <a href="https://github.com/conventional-changelog/standard-version"><img src="https://img.shields.io/badge/release-standard%20version-brightgreen.svg" alt="Standard Version"></a> <a href="https://github.com/ellerbrock/open-source-badges/"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102" alt="Open Source Love"></a> <a href="https://gitter.im/frapsoft/frapsoft/"><img src="https://badges.gitter.im/frapsoft/frapsoft.svg" alt="Gitter Chat"></a></p>
 
-<p><em>Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, Benchmarking, Debugging, Auto Reload, Linting and other cool stuff.</em></p>
+<p><em>Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, Code Coverage, JS Standard Style, Commit Guidelines, Git Hooks, Security Checks, Automatic Semantic Versioning, Benchmarking, Debugging, Monitoring, Source Map Generation, Auto Reload, Linting and more cool stuff ...</em></p>
+
+<h2>
+<a id="project-status" class="anchor" href="#project-status" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Status</h2>
+
+<p><a href="https://travis-ci.org/ellerbrock/node-developer-boilerplate"><img src="https://travis-ci.org/ellerbrock/node-developer-boilerplate.svg?branch=master" alt="Build Status"></a> <a href="https://codecov.io/gh/ellerbrock/node-developer-boilerplate"><img src="https://codecov.io/gh/ellerbrock/node-developer-boilerplate/branch/master/graph/badge.svg" alt="codecov"></a> <img src="https://david-dm.org/ellerbrock/node-developer-boilerplate.svg" alt="dependencies"></p>
+
+
 
 <h2>
 <a id="whats-inside" class="anchor" href="#whats-inside" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Whats inside?</h2>
@@ -36,52 +43,78 @@
 </li>
 <li>ES6+ aware minifier based on the Babel toolchain <a href="https://github.com/babel/babili">babili</a>
 </li>
-<li>Code monitoring and auto server restart with <a href="https://github.com/remy/nodemon">nodemon</a>
+<li>Auto Reload while developing with <a href="https://github.com/remy/nodemon">nodemon</a>
 </li>
-<li>ES6+ Testing via <a href="https://github.com/babel/babel/tree/master/packages/babel-register">babel-register</a> with <a href="https://github.com/mochajs/mocha">Mocha</a> &amp; <a href="https://github.com/chaijs/chai">Chai</a>
-</li>
-<li>HTML Test Report via <a href="https://github.com/adamgruber/mochawesome">mochawesome</a>
+<li>Node.js Server Performance Monitoring with <a href="https://github.com/FormidableLabs/nodejs-dashboard">nodejs-dashboard</a>
 </li>
 <li>Code Linting with <a href="https://github.com/eslint/eslint">ESLint</a>
 </li>
-<li>Benchmark Testing with <a href="https://github.com/bestiejs/benchmark.js">benchmark.js</a>
+<li>Code Benchmark Testing with <a href="https://github.com/bestiejs/benchmark.js">benchmark.js</a>
+</li>
+<li>ES6+ Testing via <a href="https://github.com/babel/babel/tree/master/packages/babel-register">babel-register</a> with <a href="https://github.com/mochajs/mocha">Mocha</a> &amp; <a href="https://github.com/chaijs/chai">Chai</a>
+</li>
+<li>HTML Export from the Test results via <a href="https://github.com/adamgruber/mochawesome">mochawesome</a>
+</li>
+<li>ES6+ Code Coverage with <a href="https://github.com/jmcriffey/babel-istanbul">babel-istanbul</a>
+</li>
+<li>Ready for Continuous Integration &amp; Delivery with <a href="travis-ci.org">travis-ci</a>
 </li>
 <li>Javascript <a href="https://github.com/feross/standard">Standard</a> Coding Style ready</li>
+<li>Standard Releasing via <a href="https://github.com/conventional-changelog/standard-version">Standard Version</a>
+</li>
+<li>Use Standard Conventional Commit Messages via <a href="https://github.com/commitizen/cz-cli">commitizen</a>
+</li>
 <li>Debugging with <a href="https://github.com/crabdude/babel-node-debug">babel-node-debug</a>
 </li>
-<li>Sourcemap generation</li>
-<li>Vulnerability scan via <a href="https://github.com/nodesecurity/nsp">nsp</a>
+<li>Source Map Generation</li>
+<li>Vulnerability scan via <a href="https://github.com/Snyk/snyk">snyk</a>
 </li>
-<li>Check for latest versions of dependencies via <a href="https://github.com/tjunnone/npm-check-updates">ncu</a>
+<li>Check for latest versions of dependencies via <a href="https://github.com/tjunnone/npm-check-updates">npm-check-updates</a>
 </li>
-<li>Git commit hook to use conventional commit messages via <a href="https://github.com/commitizen/cz-cli">commitizen</a>
+<li>Run Git Hooks before commit via <a href="https://github.com/ellerbrock/ghooks">ghooks</a>
 </li>
-<li>Generate a changelog from git metadata with angular <a href="https://github.com/conventional-changelog/standard-changelog">commit convention</a>
+<li>Automatically generate a Changelog from git metadata via <a href="https://github.com/conventional-changelog/standard-changelog">commit convention</a>
 </li>
-<li>Semantic Releasing via <a href="https://github.com/conventional-changelog/standard-version">Standard Version</a>
-</li>
-<li>Cross platform script support via <a href="https://github.com/shelljs/shx">Shell.js / shx</a>
-</li>
-<li>npm scripts to quickly run tasks</li>
+<li>npm scripts to get quick up and running</li>
 </ul>
 
-<p><strong>Info:</strong> A yarn version with the same setup is available here: <a href="https://github.com/ellerbrock/yarn-node-boilerplate">yarn-node-boilerplate</a></p>
+<h2>
+<a id="external-services" class="anchor" href="#external-services" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>External Services</h2>
+
+<p><em>all used services are free to use for open source projects and quick super quick registration via github authentication</em></p>
+
+<ul>
+<li>
+<a href="https://github.com/">github</a> - Modern Version Control System</li>
+<li>
+<a href="https://www.npmjs.com/">npmjs</a> - Javascript Package Registry (optional: only if you want to publish to the npm registry)</li>
+<li>
+<a href="travis-ci.org">travis-ci</a> - Continuous Integration &amp; Delivery</li>
+<li>
+<a href="https://codecov.io/">codecov.io</a> - Code Coverage</li>
+<li>
+<a href="https://snyk.io">snyk.io</a> - Fix and prevent known vulnerabilities in dependencies</li>
+<li>
+<a href="https://greenkeeper.io">greenkeeper.io</a> - Automated Dependency Management</li>
+</ul>
+
+<p>In case you have to pass some secure token to Travis-CI i recommend the <a href="https://github.com/travis-ci/travis.rb">travis-cli</a> tool for decryption and lots of other features. You can read more about it <a href="https://docs.travis-ci.com/user/encryption-keys/">here</a>. Linux / OS X Installation via <code>sudo gem install travis</code>. You can also set Token on GitHub in the Repository Settings.</p>
 
 <p><img src="http://i.giphy.com/3o85xBO5Rt4031bH44.gif" alt="unicorn"></p>
 
 <h2>
 <a id="quickstart-npm" class="anchor" href="#quickstart-npm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quickstart (npm)</h2>
 
-<pre><code>git clone https://github.com/ellerbrock/node-npm-boilerplate
-cd node-npm-boilerplate
+<pre><code>git clone https://github.com/ellerbrock/node-developer-boilerplate
+cd node-developer-boilerplate
 npm install
 </code></pre>
 
 <h2>
 <a id="quickstart-yarn" class="anchor" href="#quickstart-yarn" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quickstart (yarn)</h2>
 
-<pre><code>git clone https://github.com/ellerbrock/node-npm-boilerplate
-cd node-npm-boilerplate
+<pre><code>git clone https://github.com/ellerbrock/node-developer-boilerplate
+cd node-developer-boilerplate
 yarn
 </code></pre>
 
@@ -95,17 +128,18 @@ yarn
 <li>
 <code>npm run benchmark:watch</code> - run benchmark tests with <code>benchmark.js</code> and watch for file changes</li>
 <li>
-<code>npm run build</code> - transpile and minify ES6+ code and create sourcemaps with <code>babel</code> &amp; <code>babili</code>
+<code>npm run build</code> - transpile and minify ES6+ code and generate Source Maps with <code>babel</code> &amp; <code>babili</code>
 </li>
 <li>
 <code>npm run clean</code> - deletes the dist folder (Cross Platform Support via <code>Shell.js / shx</code>)</li>
 <li>
-<code>npm run debug src</code> - execute code with debug flag enabled <em>(add the folder and script name if not index.js as argument)</em>
-</li>
+<code>npm run debug</code> - run node in debug mode</li>
 <li>
 <code>npm run git:add</code> - add all files to git and print the status (ignore files via <code>.gitignore</code>)</li>
 <li>
 <code>npm run git:commit</code> - commit conventional messages via commitizen`</li>
+<li>
+<code>npm run git:push</code> - </li>
 <li>
 <code>npm run lint</code> - code linting with <code>eslint</code>
 </li>
@@ -144,44 +178,37 @@ yarn
 <code>npm test:watch</code> - run tests with <code>mocha</code> and <code>chai</code> with spec as reporter in watch mode</li>
 </ul>
 
-<pre><code>  "scripts": {
-    "benchmark": "babel-node benchmark",
-    "benchmark:watch": "nodemon $2 --exec babel-node benchmark",
-    "build": "babel -s true src -d dist",
-    "clean": "shx rm -rf dist",
-    "debug": "nodemon $2 --exec babel-node --debug",
-    "git:add": "git add --all &amp;&amp; git status",
-    "git:commit": "git-cz",
-    "lint": "eslint src",
-    "lint:fix": "eslint --fix src",
-    "postrelease": "npm run setenv:dev",
-    "prerelease": "npm run clean &amp;&amp; npm run lint:fix &amp;&amp; npm run scan:security &amp;&amp; npm run setenv:prod &amp;&amp; npm run build",
-    "release": "standard-version",
-    "scan:security": "nsp check",
-    "scan:updates": "ncu",
-    "serve": "node dist",
-    "setenv:dev": "npm config set production false",
-    "setenv:prod": "npm config set production true",
-    "start": "nodemon $2 --exec babel-node",
-    "test": "mocha -c -S -R spec 'tests' --compilers js:babel-register --check-leaks",
-    "test:export": "mocha -S -R mochawesome 'tests' --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
-    "test:watch": "mocha -w -c -S -R spec 'tests' --compilers js:babel-register --check-leaks"
-  }
+<pre><code>"scripts": {
+       "benchmark": "babel-node benchmark",
+       "benchmark:watch": "nodemon $2 --exec babel-node benchmark",
+       "pre-build": "npm run clean",
+       "build": "cross-env NODE_ENV=production babel -s true src -d dist",
+       "clean": "shx rm -rf dist",
+       "coverage": "cross-env NODE_ENV=test babel-istanbul cover src/*.js _mocha --report lcovonly -- -R spec",
+       "coverage:check": "cross-env NODE_ENV=test babel-istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+       "coverage:travis": "cross-env NODE_ENV=test npm run coverage &amp;&amp; codecov",
+       "debug": "nodemon $2 --exec babel-node --debug",
+       "git:add": "git add --all &amp;&amp; git status",
+       "git:commit": "npm run git:add &amp;&amp; git-cz",
+       "git:push": "git push --follow-tags",
+       "lint": "eslint src",
+       "lint:fix": "eslint --fix src",
+       "pre-monitor": "npm run build",
+       "monitor": "nodejs-dashboard node dist",
+       "pre-release": "npm update &amp;&amp; npm run clean &amp;&amp; npm run lint:fix &amp;&amp; npm run scan:security &amp;&amp; npm run setenv:prod &amp;&amp; npm run test &amp;&amp; npm run build",
+       "release": "standard-version",
+       "post-release": "npm run setenv:dev",
+       "scan:security": "snyk test",
+       "scan:updates": "ncu",
+       "serve": "node dist",
+       "setenv:dev": "npm config set production false",
+       "setenv:prod": "npm config set production true",
+       "start": "nodemon $2 --exec babel-node",
+       "test": "cross-env NODE_ENV=test mocha -c -S -R spec --compilers js:babel-register --check-leaks",
+       "test:watch": "cross-env NODE_ENV=test npm test -- -w",
+       "test:export": "cross-env NODE_ENV=test mocha -S -R mochawesome --compilers js:babel-register --reporter-options reportDir=reports --check-leaks"
+     }
 </code></pre>
-
-<h2>
-<a id="manual-installation--build-your-own-boilerplate" class="anchor" href="#manual-installation--build-your-own-boilerplate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manual Installation / Build your own Boilerplate</h2>
-
-<ul>
-<li>
-<code>git init</code> - create a new git repository</li>
-<li>
-<code>npm init -y</code> - create a initial package.json</li>
-<li>
-<code>npm install --save-dev babel-cli nodemon eslint</code> - install development dependencies</li>
-<li>
-<code>eslint --init</code> - setup your ESLint Style (in my case JS Standard)</li>
-</ul>
 
 <h3>
 <a id="ecmascript-2015--es6" class="anchor" href="#ecmascript-2015--es6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ECMAScript 2015 / ES6</h3>
@@ -200,154 +227,45 @@ yarn
 </ul>
 
 <h3>
-<a id="ecmascript-x--stage-0" class="anchor" href="#ecmascript-x--stage-0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ECMAScript X / Stage 0</h3>
-
-<p><em>Give me that cutting edge stuff right now!</em>  </p>
-
-<p><code>npm install --save-dev babel-preset-stage-0</code> - ECMAScript <a href="https://github.com/tc39/proposals/blob/master/stage-0-proposals.md">Stage 0</a> Features</p>
-
-<h3>
-<a id="es6-aware-minifier" class="anchor" href="#es6-aware-minifier" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ES6+ aware Minifier</h3>
-
-<p><em>Minify ES6+ Code directly with <a href="https://github.com/babel/babili">babili</a>.</em></p>
-
-<ul>
-<li><code>npm install --save-dev babili babel-preset-babili</code></li>
-</ul>
-
-<h3>
-<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing</h3>
-
-<p><em>Testing with <a href="https://github.com/mochajs/mocha">Mocha</a> and <a href="https://github.com/chaijs/chai">Chai</a>, HTML Reports via <a href="https://github.com/adamgruber/mochawesome">mochawesome</a></em></p>
-
-<ul>
-<li>
-<code>npm install --save-dev babel-register</code> - install <code>babel-register</code> to test your ES6+ Code directly</li>
-<li>
-<code>npm install --save-dev mocha chai</code> - install <code>mocha</code> and <code>chai</code> for testing</li>
-<li>
-<code>npm install --save-dev mochawesome</code> - install <code>mochawesome</code> to export your tests results as fancy html files</li>
-</ul>
-
-<h3>
-<a id="benchmarking-suite" class="anchor" href="#benchmarking-suite" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Benchmarking Suite</h3>
-
-<p><em>Benchmark Testing with <a href="https://github.com/bestiejs/benchmark.js">Benchmark.js</a></em></p>
-
-<ul>
-<li>
-<code>npm install --save-dev benchmark microtime</code> - install <code>benchmark</code> and <code>microtime</code> for performance testing</li>
-</ul>
-
-<h3>
-<a id="debugging" class="anchor" href="#debugging" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Debugging</h3>
-
-<p>At the moment of writing Node.js Version 6x is sadly not working with <a href="https://github.com/node-inspector/node-inspector/">node-inspector/</a>. in current Version 0.12.8. Its a known issue i reported <a href="https://github.com/node-inspector/node-inspector/issues/905#issuecomment-246203881">here</a>. Hopefully when you read this its fixed for Node Version 6x and you can install <a href="https://github.com/crabdude/babel-node-debug">babel-node-debug</a> for debugging ... (no known issues for users with Node Version 4x and 5x).</p>
-
-<ul>
-<li><code>npm install --save-dev babel-node-debug</code></li>
-</ul>
-
-<p>In case everything works fine you can change the line in your package.json</p>
-
-<p>from:</p>
-
-<ul>
-<li><code>"debug": "nodemon $2 --exec babel-node --debug",</code></li>
-</ul>
-
-<p>to:</p>
-
-<ul>
-<li><code>"debug": "babel-node-debug $2",</code></li>
-</ul>
-
-<p>and run it via <code>npm run debug src</code> for a damn sweet debugging experience.</p>
-
-<h3>
-<a id="security--updates" class="anchor" href="#security--updates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Security &amp; Updates</h3>
-
-<p><em>Run vulnerability tests via node security platform and check dependencies for updates</em></p>
-
-<ul>
-<li>
-<code>npm install --save-dev nsp</code> - install node security platform command-line tool <a href="https://github.com/nodesecurity/nsp">nsp</a>
-</li>
-<li>
-<code>npm install --save-dev npm-check-updates</code> - install <a href="https://github.com/tjunnone/npm-check-updates">ncu</a> to check for the latest versions of the dependencies</li>
-</ul>
-
-<h3>
-<a id="gimme-some-more" class="anchor" href="#gimme-some-more" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>gimme some more</h3>
-
-<p>For more packages have a look at the <a href="https://github.com/babel/babel/tree/master/packages">https://github.com/babel/babel/tree/master/packages</a> or read more about this topic on <a href="https://babeljs.io/docs/plugins/#presets">https://babeljs.io/docs/plugins/#presets</a></p>
-
-<h3>
 <a id="packagejson" class="anchor" href="#packagejson" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>package.json</h3>
 
 <p>To avoid messing around with separate config files like .babelrc, .eslintrc.json and others we can put all that stuff directly in our package.json file:</p>
 
-<pre><code>{
-  "name": "your-awesome-module",
-  "version": "0.0.1",
-  "babel": {
-    "presets": [
-      "es2015-node6",
-      "stage-0",
-      "babili"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "standard",
-    "plugins": [
-      "standard",
-      "promise"
-    ]
-  } 
-  ...
+<pre><code>{"files": [
+     "dist",
+     "readme.md"
+   ],
+   "config": {
+     "commitizen": {
+       "path": "./node_modules/standard-changelog"
+     },
+     "ghooks": {
+       "pre-commit": "npm run clean &amp;&amp; npm run lint:fix &amp;&amp; npm test &amp;&amp; npm run coverage &amp;&amp; npm run build"
+     }
+   },
+   "babel": {
+     "presets": [
+       "es2015-node6",
+       "stage-0"
+     ],
+     "env": {
+       "production": {
+         "presets": [
+           "babili"
+         ]
+       }
+     }
+   },
+   "eslintConfig": {
+     "extends": "standard",
+     "installedESLint": true,
+     "plugins": [
+       "standard",
+       "promise"
+     ]
+   },
+   "snyk": true
 </code></pre>
-
-<p>I added to <code>npm start</code> and <code>npm run debug</code> a argument ($2) to pass the location of the file. This allows you to quickly switch between different files without changing package.json.</p>
-
-<p>Examples:</p>
-
-<p>In case you want to run <code>./src/index.js</code> you can pass <code>npm start src</code> without the need of index.js. To run <code>./src/app1.js</code> run <code>npm start src/app1</code> and so on ...</p>
-
-<h3>
-<a id="commitizen" class="anchor" href="#commitizen" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commitizen</h3>
-
-<p><code>npm install commitizen -g</code> - Installation</p>
-
-<p><code>commitizen init cz-conventional-changelog --save-dev --save-exact</code> - Setup</p>
-
-<p>Badge:  </p>
-
-<p><a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"></a> </p>
-
-<p><code>[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)</code></p>
-
-<h2>
-<a id="releasing-with-standard-version" class="anchor" href="#releasing-with-standard-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Releasing with Standard-Version</h2>
-
-<p><code>npm i --save-dev standard-version</code> - Installation as Dev Dependency</p>
-
-<p><code>npm i -g standard-version</code> - or as global Installation</p>
-
-<p><code>commitizen init standard-changelog --save-dev --save-exact</code> - Setup</p>
-
-<p><code>"release": "standard-version"</code> - add run script to <code>package.json</code></p>
-
-<p><code>"release": "standard-version --sign"</code> - if you use GPG for signing add <code>--sign</code></p>
-
-<p><code>npm run release --first-release</code> - first release</p>
-
-<p><code>npm run release</code> - further releases</p>
-
-<p>Badge:  </p>
-
-<p><a href="https://github.com/conventional-changelog/standard-version"><img src="https://img.shields.io/badge/release-standard%20version-brightgreen.svg" alt="Standard Version"></a></p>
-
-<p><code>[![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)</code></p>
 
 <h3>
 <a id="contact--social-media" class="anchor" href="#contact--social-media" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact / Social Media</h3>
@@ -364,7 +282,7 @@ yarn
 <p><a href="https://opensource.org/licenses/mit-license.php"><img src="https://badges.frapsoft.com/os/mit/mit-125x28.png?v=102" alt="MIT Licence"></a></p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/ellerbrock/node-npm-boilerplate">Node.js / npm Boilerplate</a> is maintained by <a href="https://github.com/ellerbrock">ellerbrock</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/ellerbrock/node-developer-boilerplate">Node.js / npm Boilerplate</a> is maintained by <a href="https://github.com/ellerbrock">ellerbrock</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
