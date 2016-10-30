@@ -31,7 +31,7 @@
     "lint:fix": "eslint --fix src",
     "pre-monitor": "npm run clean && npm run build",
     "monitor": "nodejs-dashboard node dist",
-    "pre-release": "npm run setenv:prod && npm run clean && npm run build && npm run update-dependencie && npm run lint:fix && npm run security:test && npm run test && npm run coverage",
+    "pre-release": "npm run setenv:prod && npm run clean && npm run build && npm run update-dependencies && npm run lint:fix && npm run security:test && npm run test && npm run coverage",
     "release": "standard-version",
     "post-release": "greenkeeper-postpublish && npm run setenv:dev",
     "security:test": "snyk test",
