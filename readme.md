@@ -9,10 +9,9 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 
 ## Project Status
 
-[![codecov](https://codecov.io/gh/ellerbrock/node-developer-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/ellerbrock/node-developer-boilerplate) ![dependencies](https://david-dm.org/ellerbrock/node-developer-boilerplate.svg)
+[![Build Status](https://travis-ci.org/ellerbrock/node-developer-boilerplate.svg?branch=master)](https://travis-ci.org/ellerbrock/node-developer-boilerplate) [![codecov](https://codecov.io/gh/ellerbrock/node-developer-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/ellerbrock/node-developer-boilerplate) ![dependencies](https://david-dm.org/ellerbrock/node-developer-boilerplate.svg)
 
 <!--
-[![Build Status](https://travis-ci.org/ellerbrock/node-developer-boilerplate.svg?branch=master)](https://travis-ci.org/ellerbrock/node-developer-boilerplate) 
 ![vulnerbilities](https://snyk.io/test/github/ellerbrock/node-developer-boilerplate/badge.svg)
 -->
 
@@ -97,7 +96,8 @@ yarn
 - `npm test:export` - export your test results via `mochawesome` as html
 - `npm test:watch` - run tests with `mocha` and `chai` with spec as reporter in watch mode
 
-```"scripts": {
+```
+"scripts": {
        "benchmark": "babel-node benchmark",
        "benchmark:watch": "nodemon $2 --exec babel-node benchmark",
        "pre-build": "npm run clean",
