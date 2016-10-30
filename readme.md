@@ -17,24 +17,29 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 ## Features
 
 - Node optimized ES6 / ES7 transpilation with [Babel](https://github.com/babel/babel)
-- ES6+ aware minifier based on the Babel toolchain [babili](https://github.com/babel/babili)
+- ES6+ aware code minifier based on the Babel toolchain [babili](https://github.com/babel/babili)
 - Auto Reload while developing with [nodemon](https://github.com/remy/nodemon)
 - Node.js Server Performance Monitoring with [nodejs-dashboard](https://github.com/FormidableLabs/nodejs-dashboard)
 - Code Linting with [ESLint](https://github.com/eslint/eslint)
 - Code Benchmark Testing with [benchmark.js](https://github.com/bestiejs/benchmark.js)
 - ES6+ Testing via [babel-register](https://github.com/babel/babel/tree/master/packages/babel-register) with [Mocha](https://github.com/mochajs/mocha) & [Chai](https://github.com/chaijs/chai)
-- HTML Export from the Test results via [mochawesome](https://github.com/adamgruber/mochawesome)
+- Generate HTML Reports from tests via [mochawesome](https://github.com/adamgruber/mochawesome)
 - ES6+ Code Coverage with [babel-istanbul](https://github.com/jmcriffey/babel-istanbul)
 - Ready for Continuous Integration & Delivery with [travis-ci](https://travis-ci.org)
 - Javascript [Standard](https://github.com/feross/standard) Coding Style ready
-- Standard Releasing via [Standard Version](https://github.com/conventional-changelog/standard-version)
+- Standard Releasing via [standard-version](https://github.com/conventional-changelog/standard-version)
 - Use Standard Conventional Commit Messages via [commitizen](https://github.com/commitizen/cz-cli)
+- Lint Commit Messages via [conventional-changelog-lint](https://github.com/marionebl/conventional-changelog-lint)
+- Automatically generate a Changelog from git metadata via [conventional-changelog-angular-emoji](https://github.com/ellerbrock/conventional-changelog-angular-emoji)
+- Run Git Hooks before commit via [ghooks](https://github.com/ellerbrock/ghooks)
 - Debugging with [babel-node-debug](https://github.com/crabdude/babel-node-debug)
 - Source Map Generation
-- Vulnerability scan via [snyk](https://github.com/Snyk/snyk)
+
 - Check for latest versions of dependencies via [npm-check-updates](https://github.com/tjunnone/npm-check-updates)
-- Run Git Hooks before commit via [ghooks](https://github.com/ellerbrock/ghooks)
-- Automatically generate a Changelog from git metadata via [commit convention](https://github.com/conventional-changelog/standard-changelog)
+- Vulnerability scan via [snyk](https://github.com/Snyk/snyk)
+- Lint .travis.yml with [travis-lint](https://github.com/pwmckenna/node-travis-lint)
+- Lint Markdown files with [markdownlint](https://github.com/DavidAnson/markdownlint)
+- Check if links in Markdown are online via [markdown-link-check](https://github.com/tcort/markdown-link-check)
 - npm scripts to get quick up and running
 
 ## External Services
