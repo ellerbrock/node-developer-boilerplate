@@ -1,21 +1,20 @@
 'use strict'
 
 import benchmark from 'benchmark'
-import { sum } from '../src/sum'
 
 const suite = new benchmark.Suite
 
-const a = 1
-const b = 2
+const a = 1000
+const b = 2000
 
 let result = 0
 
 suite
-  .add('sum module addition with 2 numbers', function () {
-    result = sum(a, b)
-  })
-  .add('sum module addition with 2 numbers', function () {
+  .add('Benchmark Description 1', function () {
     result = a + b
+  })
+  .add('Benchmark Description 2', function () {
+    result = ((a * 1000) / 1000) + ((b * 1000) / 1000)
   })
   // add listeners
   .on('cycle', function (event) {

@@ -1,14 +1,7 @@
 *.log
-*.org.md
-*.pid
-*.sh
 *~
-.tscache
+/coverage
 /dist
 /local
 /reports
-/template.md
-/templates
-/typings
-ab-results*
 node_modules

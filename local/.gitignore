@@ -1,0 +1,14 @@
+*.log
+*.org.md
+*.pid
+*.sh
+*~
+.tscache
+/dist
+/local
+/reports
+/template.md
+/templates
+/typings
+ab-results*
+node_modules
