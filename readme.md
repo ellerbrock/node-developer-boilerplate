@@ -6,7 +6,6 @@
 
 _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, Code Coverage, JS Standard Style, Commit Guidelines, Git Hooks, Security Checks, Automatic Semantic Versioning, Benchmarking, Debugging, Monitoring, Source Map Generation, Auto Reload, Linting and more cool stuff ..._
 
-
 ## Project Status
 
 [![Build Status](https://travis-ci.org/ellerbrock/node-developer-boilerplate.svg?branch=master)](https://travis-ci.org/ellerbrock/node-developer-boilerplate) [![codecov](https://codecov.io/gh/ellerbrock/node-developer-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/ellerbrock/node-developer-boilerplate) ![dependencies](https://david-dm.org/ellerbrock/node-developer-boilerplate.svg)
@@ -15,7 +14,7 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 ![vulnerbilities](https://snyk.io/test/github/ellerbrock/node-developer-boilerplate/badge.svg)
 -->
 
-## Whats inside?
+## Features
 
 - Node optimized ES6 / ES7 transpilation with [Babel](https://github.com/babel/babel)
 - ES6+ aware minifier based on the Babel toolchain [babili](https://github.com/babel/babili)
@@ -26,7 +25,7 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 - ES6+ Testing via [babel-register](https://github.com/babel/babel/tree/master/packages/babel-register) with [Mocha](https://github.com/mochajs/mocha) & [Chai](https://github.com/chaijs/chai)
 - HTML Export from the Test results via [mochawesome](https://github.com/adamgruber/mochawesome)
 - ES6+ Code Coverage with [babel-istanbul](https://github.com/jmcriffey/babel-istanbul)
-- Ready for Continuous Integration & Delivery with [travis-ci](travis-ci.org)
+- Ready for Continuous Integration & Delivery with [travis-ci](https://travis-ci.org)
 - Javascript [Standard](https://github.com/feross/standard) Coding Style ready
 - Standard Releasing via [Standard Version](https://github.com/conventional-changelog/standard-version)
 - Use Standard Conventional Commit Messages via [commitizen](https://github.com/commitizen/cz-cli)
@@ -38,14 +37,13 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 - Automatically generate a Changelog from git metadata via [commit convention](https://github.com/conventional-changelog/standard-changelog)
 - npm scripts to get quick up and running
 
-
 ## External Services
 
 *all used services are free to use for open source projects and quick super quick registration via github authentication*
 
 - [github](https://github.com/) - Modern Version Control System
 - [npmjs](https://www.npmjs.com/) - Javascript Package Registry (optional: only if you want to publish to the npm registry)
-- [travis-ci](travis-ci.org) - Continuous Integration & Delivery
+- [travis-ci](https://travis-ci.org) - Continuous Integration & Delivery
 - [codecov.io](https://codecov.io/) - Code Coverage
 - [snyk.io](https://snyk.io) - Fix and prevent known vulnerabilities in dependencies
 - [greenkeeper.io](https://greenkeeper.io) - Automated Dependency Management
@@ -56,20 +54,35 @@ In case you have to pass some secure token to Travis-CI i recommend the [travis-
 
 ## Quickstart (npm)
 
-```
+```bash
 git clone https://github.com/ellerbrock/node-developer-boilerplate
 cd node-developer-boilerplate
 npm install
 ```
 
-
 ## Quickstart (yarn)
 
-```
+```bash
 git clone https://github.com/ellerbrock/node-developer-boilerplate
 cd node-developer-boilerplate
 yarn
 ```
+
+### ECMAScript 2015 / ES6
+
+[Node.js](https://github.com/nodejs/node) comes with a huge set of ES6 features out of the box. A detailed list of supported features can be found at <http://node.green>. To speed things up and avoid transpiling natively supported features i recommend to install only the missing parts in your current Node Version:
+
+- `npm install --save-dev babel-preset-es2015-node6` - Node.js Version 6x
+- `npm install --save-dev babel-preset-es2015-node5` - Node.js Version 5x
+- `npm install --save-dev babel-preset-es2015-node4` - Node.js Version 4x
+- `npm install --save-dev babel-preset-es2015` - for all Node.js Versions
+
+### Info
+
+At the moment im bussy working on this boilerplate and lot stuff is changing.  
+When things getting more stable i will bump the version to 1.0.0 and write a detailed documentation.  
+
+<!-- 
 
 ## Scripts
 
@@ -96,97 +109,89 @@ yarn
 - `npm test:export` - export your test results via `mochawesome` as html
 - `npm test:watch` - run tests with `mocha` and `chai` with spec as reporter in watch mode
 
-```
+```json
 "scripts": {
-       "benchmark": "babel-node benchmark",
-       "benchmark:watch": "nodemon $2 --exec babel-node benchmark",
-       "pre-build": "npm run clean",
-       "build": "cross-env NODE_ENV=production babel -s true src -d dist",
-       "clean": "shx rm -rf dist",
-       "coverage": "cross-env NODE_ENV=test babel-istanbul cover src/*.js _mocha --report lcovonly -- -R spec",
-       "coverage:check": "cross-env NODE_ENV=test babel-istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
-       "coverage:travis": "cross-env NODE_ENV=test npm run coverage && codecov",
-       "debug": "nodemon $2 --exec babel-node --debug",
-       "git:add": "git add --all && git status",
-       "git:commit": "npm run git:add && git-cz",
-       "git:push": "git push --follow-tags",
-       "lint": "eslint src",
-       "lint:fix": "eslint --fix src",
-       "pre-monitor": "npm run build",
-       "monitor": "nodejs-dashboard node dist",
-       "pre-release": "npm update && npm run clean && npm run lint:fix && npm run scan:security && npm run setenv:prod && npm run test && npm run build",
-       "release": "standard-version",
-       "post-release": "npm run setenv:dev",
-       "scan:security": "snyk test",
-       "scan:updates": "ncu",
-       "serve": "node dist",
-       "setenv:dev": "npm config set production false",
-       "setenv:prod": "npm config set production true",
-       "start": "nodemon $2 --exec babel-node",
-       "test": "cross-env NODE_ENV=test mocha -c -S -R spec --compilers js:babel-register --check-leaks",
-       "test:watch": "cross-env NODE_ENV=test npm test -- -w",
-       "test:export": "cross-env NODE_ENV=test mocha -S -R mochawesome --compilers js:babel-register --reporter-options reportDir=reports --check-leaks"
-     }
+    "benchmark": "babel-node benchmark",
+    "benchmark:watch": "nodemon src/index.js --exec babel-node benchmark",
+    "pre-build": "npm run clean",
+    "build": "cross-env NODE_ENV=production babel -s true src -d dist",
+    "clean": "shx rm -rf dist",
+    "pre-coverage": "shx rm -rf coverage",
+    "coverage": "cross-env NODE_ENV=test babel-istanbul cover src/*.js _mocha --report lcovonly -- -R spec",
+    "post-coverage": "cross-env NODE_ENV=test babel-istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "coverage:ci": "cross-env NODE_ENV=test npm run coverage && codecov",
+    "debug": "nodemon src/index.js --exec babel-node --debug",
+    "git:add": "git add --all && git status",
+    "git:commit": "npm run git:add && git-cz",
+    "git:push": "git push --follow-tags",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "pre-monitor": "npm run clean && npm run build",
+    "monitor": "nodejs-dashboard node dist",
+    "pre-release": "npm run setenv:prod && npm run clean && npm run build && npm run update-dependencies && npm run lint:fix && npm run security:test && npm run test && npm run coverage",
+    "release": "standard-version",
+    "post-release": "greenkeeper-postpublish && npm run setenv:dev",
+    "security:test": "snyk test",
+    "update-dependencies": "npm update && ncu -ua && npm upgrade",
+    "serve": "node dist",
+    "setenv:dev": "npm config set production false",
+    "setenv:prod": "npm config set production true",
+    "start": "nodemon src/index.js --exec babel-node",
+    "pre-test": "shx rm -rf reports",
+    "test": "cross-env NODE_ENV=test mocha -c -S -R spec --compilers js:babel-register --check-leaks",
+    "post-test": "",
+    "test:report": "cross-env NODE_ENV=test mocha -S -R mochawesome --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
+    "test:watch": "cross-env NODE_ENV=test npm test -- -w"
+  }
 ```
-
-
-### ECMAScript 2015 / ES6
-
-[Node.js](https://github.com/nodejs/node) comes with a huge set of ES6 features out of the box. A detailed list of supported features can be found at <http://node.green>. To speed things up and avoid transpiling natively supported features i recommend to install only the missing parts in your current Node Version:
-
-- `npm install --save-dev babel-preset-es2015-node6` - Node.js Version 6x
-- `npm install --save-dev babel-preset-es2015-node5` - Node.js Version 5x
-- `npm install --save-dev babel-preset-es2015-node4` - Node.js Version 4x
-- `npm install --save-dev babel-preset-es2015` - for all Node.js Versions
 
 ### package.json
 
 To avoid messing around with separate config files like .babelrc, .eslintrc.json and others we can put all that stuff directly in our package.json file:
 
-```
-{"files": [
-     "dist",
-     "readme.md"
-   ],
-   "config": {
-     "commitizen": {
-       "path": "./node_modules/standard-changelog"
-     },
-     "ghooks": {
-       "pre-commit": "npm run clean && npm run lint:fix && npm test && npm run coverage && npm run build"
-     }
-   },
-   "babel": {
-     "presets": [
-       "es2015-node6",
-       "stage-0"
-     ],
-     "env": {
-       "production": {
-         "presets": [
-           "babili"
-         ]
-       }
-     }
-   },
-   "eslintConfig": {
-     "extends": "standard",
-     "installedESLint": true,
-     "plugins": [
-       "standard",
-       "promise"
-     ]
-   },
-   "snyk": true
+```json
+  "files": [
+    "dist"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/standard-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run clean && npm run lint:fix && npm test && npm run coverage && npm run build"
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015-node6",
+      "stage-0"
+    ],
+    "env": {
+      "production": {
+        "presets": [
+          "babili"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "installedESLint": true,
+    "plugins": [
+      "standard",
+      "promise"
+    ]
+  },
+  "snyk": true
 ```
 
+-->
 
 ### Contact / Social Media
 
 _Get the latest News about Web Development, Open Source, Tooling, Server & Security_
 
 [![Twitter](https://github.frapsoft.com/social/twitter.png)](https://twitter.com/frapsoft/)[![Facebook](https://github.frapsoft.com/social/facebook.png)](https://www.facebook.com/frapsoft/)[![Google+](https://github.frapsoft.com/social/google-plus.png)](https://plus.google.com/116540931335841862774)[![Gitter](https://github.frapsoft.com/social/gitter.png)](https://gitter.im/frapsoft/frapsoft/)[![Github](https://github.frapsoft.com/social/github.png)](https://github.com/ellerbrock/)
-
 
 ### License
 

@@ -1,7 +1,6 @@
 *.log
-*~
 /coverage
 /dist
 /local
 /reports
-node_modules
+/node_modules
