@@ -10,10 +10,6 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 
 [![Build Status](https://travis-ci.org/ellerbrock/node-developer-boilerplate.svg?branch=master)](https://travis-ci.org/ellerbrock/node-developer-boilerplate) [![codecov](https://codecov.io/gh/ellerbrock/node-developer-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/ellerbrock/node-developer-boilerplate) ![dependencies](https://david-dm.org/ellerbrock/node-developer-boilerplate.svg)
 
-<!--
-![vulnerbilities](https://snyk.io/test/github/ellerbrock/node-developer-boilerplate/badge.svg)
--->
-
 ## Features
 
 - Node optimized ES6 / ES7 transpilation with [Babel](https://github.com/babel/babel)
@@ -31,10 +27,8 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 - Use Standard Conventional Commit Messages via [commitizen](https://github.com/commitizen/cz-cli)
 - Lint Commit Messages via [conventional-changelog-lint](https://github.com/marionebl/conventional-changelog-lint)
 - Automatically generate a Changelog from git metadata via [conventional-changelog-angular-emoji](https://github.com/ellerbrock/conventional-changelog-angular-emoji)
-- Run Git Hooks before commit via [ghooks](https://github.com/ellerbrock/ghooks)
 - Debugging with [babel-node-debug](https://github.com/crabdude/babel-node-debug)
 - Source Map Generation
-
 - Check for latest versions of dependencies via [npm-check-updates](https://github.com/tjunnone/npm-check-updates)
 - Vulnerability scan via [snyk](https://github.com/Snyk/snyk)
 - Lint .travis.yml with [travis-lint](https://github.com/pwmckenna/node-travis-lint)
@@ -87,110 +81,7 @@ yarn
 At the moment im bussy working on this boilerplate and lot stuff is changing.  
 When things getting more stable i will bump the version to 1.0.0 and write a detailed documentation.  
 
-<!-- 
-
-## Scripts
-
-- `npm run benchmark` - run benchmark tests with `benchmark.js`
-- `npm run benchmark:watch` - run benchmark tests with `benchmark.js` and watch for file changes
-- `npm run build` - transpile and minify ES6+ code and generate Source Maps with `babel` & `babili`
-- `npm run clean` - deletes the dist folder (Cross Platform Support via `Shell.js / shx`)
-- `npm run debug` - run node in debug mode
-- `npm run git:add` - add all files to git and print the status (ignore files via `.gitignore`)
-- `npm run git:commit` - commit conventional messages via commitizen`
-- `npm run git:push` - 
-- `npm run lint` - code linting with `eslint`
-- `npm run lint:fix` - fix problems automatically with `eslint`
-- `npm run release` - Automatic versioning and CHANGELOG management via `Standard Version`
-- `npm run scan:security` - run vulnerability tests via the node security platform `nsp`
-- `npm run scan:updates` - check for latest versions of dependencies via `ncu`
-- `npm run serve` - serve production files from the `./dist` folder via `node`
-- `npm run setenv:dev` - deactivate npm production mode
-- `npm run setenv:prod` - activate npm production mode
-- `npm run test:export` - export tests results as html files in the `./reports` folder via `mochasome`
-- `npm run test:watch` - run tests with `mocha` and `chai` and watch for changes
-- `npm start src` - execute code with life reload via `nodemon` transpiled with `babel-node` _(add the folder and script name if not index.js as argument)_
-- `npm test` - run tests with `mocha` and `chai` with spec as reporter
-- `npm test:export` - export your test results via `mochawesome` as html
-- `npm test:watch` - run tests with `mocha` and `chai` with spec as reporter in watch mode
-
-```json
-"scripts": {
-    "benchmark": "babel-node benchmark",
-    "benchmark:watch": "nodemon src/index.js --exec babel-node benchmark",
-    "pre-build": "npm run clean",
-    "build": "cross-env NODE_ENV=production babel -s true src -d dist",
-    "clean": "shx rm -rf dist",
-    "pre-coverage": "shx rm -rf coverage",
-    "coverage": "cross-env NODE_ENV=test babel-istanbul cover src/*.js _mocha --report lcovonly -- -R spec",
-    "post-coverage": "cross-env NODE_ENV=test babel-istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
-    "coverage:ci": "cross-env NODE_ENV=test npm run coverage && codecov",
-    "debug": "nodemon src/index.js --exec babel-node --debug",
-    "git:add": "git add --all && git status",
-    "git:commit": "npm run git:add && git-cz",
-    "git:push": "git push --follow-tags",
-    "lint": "eslint src",
-    "lint:fix": "eslint --fix src",
-    "pre-monitor": "npm run clean && npm run build",
-    "monitor": "nodejs-dashboard node dist",
-    "pre-release": "npm run setenv:prod && npm run clean && npm run build && npm run update-dependencies && npm run lint:fix && npm run security:test && npm run test && npm run coverage",
-    "release": "standard-version",
-    "post-release": "greenkeeper-postpublish && npm run setenv:dev",
-    "security:test": "snyk test",
-    "update-dependencies": "npm update && ncu -ua && npm upgrade",
-    "serve": "node dist",
-    "setenv:dev": "npm config set production false",
-    "setenv:prod": "npm config set production true",
-    "start": "nodemon src/index.js --exec babel-node",
-    "pre-test": "shx rm -rf reports",
-    "test": "cross-env NODE_ENV=test mocha -c -S -R spec --compilers js:babel-register --check-leaks",
-    "post-test": "",
-    "test:report": "cross-env NODE_ENV=test mocha -S -R mochawesome --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
-    "test:watch": "cross-env NODE_ENV=test npm test -- -w"
-  }
-```
-
-### package.json
-
-To avoid messing around with separate config files like .babelrc, .eslintrc.json and others we can put all that stuff directly in our package.json file:
-
-```json
-  "files": [
-    "dist"
-  ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/standard-changelog"
-    },
-    "ghooks": {
-      "pre-commit": "npm run clean && npm run lint:fix && npm test && npm run coverage && npm run build"
-    }
-  },
-  "babel": {
-    "presets": [
-      "es2015-node6",
-      "stage-0"
-    ],
-    "env": {
-      "production": {
-        "presets": [
-          "babili"
-        ]
-      }
-    }
-  },
-  "eslintConfig": {
-    "extends": "standard",
-    "installedESLint": true,
-    "plugins": [
-      "standard",
-      "promise"
-    ]
-  },
-  "snyk": true
-```
-
--->
+[//]: # (Comment)
 
 ### Contact / Social Media
 

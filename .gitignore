@@ -1,4 +1,5 @@
 *.log
+tmp.md
 /coverage
 /dist
 /local
