@@ -12,33 +12,34 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 
 ## Features
 
-- Node optimized ES6 / ES7 transpilation with [Babel](https://github.com/babel/babel)
-- ES6+ aware code minifier based on the Babel toolchain [babili](https://github.com/babel/babili)
-- Auto Reload while developing with [nodemon](https://github.com/remy/nodemon)
-- Node.js Server Performance Monitoring with [nodejs-dashboard](https://github.com/FormidableLabs/nodejs-dashboard)
-- Code Linting with [ESLint](https://github.com/eslint/eslint)
+- Node optimized ES6 / ES7 Transpilation and Source Maps with [Babel](https://github.com/babel/babel)
+- ES6+ aware Code Minification based on the Babel toolchain [babili](https://github.com/babel/babili)
+- Restart Node on Application Changes with [nodemon](https://github.com/remy/nodemon)
+- Code Debugging with [babel-node-debug](https://github.com/crabdude/babel-node-debug)
+- Node Server Performance Monitoring with [nodejs-dashboard](https://github.com/FormidableLabs/nodejs-dashboard)
+- Javascript Linting with [ESLint](https://github.com/eslint/eslint)
+- Javascript Code Style [Standard](https://github.com/feross/standard)
+- Javascript Style Linting via [eslint-config-standard](https://github.com/feross/eslint-config-standard)
+- Automatic Semantic Releasing with [standard-version](https://github.com/conventional-changelog/standard-version)
 - Code Benchmark Testing with [benchmark.js](https://github.com/bestiejs/benchmark.js)
+- Check for latest versions of dependencies via [npm-check-updates](https://github.com/tjunnone/npm-check-updates)
+- Vulnerability scan via [snyk](https://github.com/Snyk/snyk)
 - ES6+ Testing via [babel-register](https://github.com/babel/babel/tree/master/packages/babel-register) with [Mocha](https://github.com/mochajs/mocha) & [Chai](https://github.com/chaijs/chai)
 - Generate HTML Reports from tests via [mochawesome](https://github.com/adamgruber/mochawesome)
 - ES6+ Code Coverage with [babel-istanbul](https://github.com/jmcriffey/babel-istanbul)
 - Ready for Continuous Integration & Delivery with [travis-ci](https://travis-ci.org)
-- Javascript [Standard](https://github.com/feross/standard) Coding Style ready
-- Standard Releasing via [standard-version](https://github.com/conventional-changelog/standard-version)
 - Use Standard Conventional Commit Messages via [commitizen](https://github.com/commitizen/cz-cli)
 - Lint Commit Messages via [conventional-changelog-lint](https://github.com/marionebl/conventional-changelog-lint)
 - Automatically generate a Changelog from git metadata via [conventional-changelog-angular-emoji](https://github.com/ellerbrock/conventional-changelog-angular-emoji)
-- Debugging with [babel-node-debug](https://github.com/crabdude/babel-node-debug)
-- Source Map Generation
-- Check for latest versions of dependencies via [npm-check-updates](https://github.com/tjunnone/npm-check-updates)
-- Vulnerability scan via [snyk](https://github.com/Snyk/snyk)
-- Lint .travis.yml with [travis-lint](https://github.com/pwmckenna/node-travis-lint)
 - Lint Markdown files with [markdownlint](https://github.com/DavidAnson/markdownlint)
 - Check if links in Markdown are online via [markdown-link-check](https://github.com/tcort/markdown-link-check)
+- Lint .travis.yml with [travis-lint](https://github.com/pwmckenna/node-travis-lint)
+- Slack Notifications and Email via [travis-ci](https://docs.travis-ci.com/user/notifications)
 - npm scripts to get quick up and running
 
 ## External Services
 
-*all used services are free to use for open source projects and quick super quick registration via github authentication*
+*all used services are free to use for open source projects and quick registration via github authentication*
 
 - [github](https://github.com/) - Modern Version Control System
 - [npmjs](https://www.npmjs.com/) - Javascript Package Registry (optional: only if you want to publish to the npm registry)
@@ -78,10 +79,8 @@ yarn
 
 ### Info
 
-At the moment im bussy working on this boilerplate and lot stuff is changing.  
+At the moment im busy working on this boilerplate and lot stuff is changing.  
 When things getting more stable i will bump the version to 1.0.0 and write a detailed documentation.  
-
-[//]: # (Comment)
 
 ### Contact / Social Media
 
