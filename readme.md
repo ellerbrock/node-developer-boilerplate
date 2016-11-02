@@ -29,12 +29,13 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 - ES6+ Code Coverage with [babel-istanbul](https://github.com/jmcriffey/babel-istanbul)
 - Ready for Continuous Integration & Delivery with [travis-ci](https://travis-ci.org)
 - Use Standard Conventional Commit Messages via [commitizen](https://github.com/commitizen/cz-cli)
+- Commitizen Emoji Support for [cz-conventional-changelog-emoji](https://github.com/ellerbrock/cz-conventional-changelog-emoji)
+- Automatic generate Changelog with Emoji Support [conventional-changelog-angular-emoji](https://github.com/ellerbrock/conventional-changelog-angular-emoji)
 - Lint Commit Messages via [conventional-changelog-lint](https://github.com/marionebl/conventional-changelog-lint)
-- Automatically generate a Changelog from git metadata via [conventional-changelog-angular-emoji](https://github.com/ellerbrock/conventional-changelog-angular-emoji)
 - Lint Markdown files with [markdownlint](https://github.com/DavidAnson/markdownlint)
 - Check if links in Markdown are online via [markdown-link-check](https://github.com/tcort/markdown-link-check)
 - Lint .travis.yml with [travis-lint](https://github.com/pwmckenna/node-travis-lint)
-- Slack Notifications and Email via [travis-ci](https://docs.travis-ci.com/user/notifications)
+- Slack & Email Notifications for Builds via [travis-ci](https://docs.travis-ci.com/user/notifications)
 - npm scripts to get quick up and running
 
 ## External Services

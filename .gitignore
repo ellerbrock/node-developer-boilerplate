@@ -1,5 +1,9 @@
 *.log
+changelog.md
+CHANGELOG.md
 tmp.md
+todo.md
+/.idea
 /coverage
 /dist
 /local
