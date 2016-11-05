@@ -36,6 +36,7 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 - Check if links in Markdown are online via [markdown-link-check](https://github.com/tcort/markdown-link-check)
 - Lint .travis.yml with [travis-lint](https://github.com/pwmckenna/node-travis-lint)
 - Slack & Email Notifications for Builds via [travis-ci](https://docs.travis-ci.com/user/notifications)
+- Task Runner CLI via [ntl](https://github.com/ruyadorno/ntl)
 - npm scripts to get quick up and running
 
 ## External Services
