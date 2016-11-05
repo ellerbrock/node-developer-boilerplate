@@ -39,7 +39,7 @@
     "lint:markdown-links": "markdown-link-check readme.md",
     "premonitor": "npm run clean:dist && npm run build",
     "monitor": "nodejs-dashboard node dist",
-    "prerelease": "npm run setenv:prod && npm run clean && npm run build && npm prune && npm run update-dependencies && npm run lint && npm run test && npm run coverage",
+    "prerelease": "npm run setenv:prod && npm run clean && npm run build && npm run update-dependencies && npm run lint && npm run test && npm run coverage",
     "release": "standard-version --no-verify",
     "postrelease": "greenkeeper-postpublish && npm run setenv:dev",
     "security:test": "snyk test",
@@ -51,11 +51,11 @@
     "setenv:dev": "npm config set production false",
     "setenv:prod": "npm config set production true",
     "start": "nodemon src/index.js --exec babel-node",
+    "tasks": "ntl",
     "pretest": "npm run clean:coverage && npm run clean:reports",
     "test": "cross-env NODE_ENV=test mocha -c -S -R spec --compilers js:babel-register --check-leaks",
     "posttest": "cross-env NODE_ENV=test mocha -S -R mochawesome --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
-    "test:watch": "cross-env NODE_ENV=test npm test -- -w",
-    "tasks": "ntl"
+    "test:watch": "cross-env NODE_ENV=test npm test -- -w"
   },
   "files": [
     "dist"
@@ -118,6 +118,8 @@
     "npm-check-updates": "2.8.6",
     "ntl": "1.1.3",
     "shx": "^0.1.4",
+    "sinon": "1.17.6",
+    "sinon-chai": "2.8.0",
     "snyk": "^1.19.1",
     "standard-changelog": "0.0.1",
     "standard-version": "^3.0.0",

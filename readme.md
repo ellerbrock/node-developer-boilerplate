@@ -24,7 +24,7 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 - Code Benchmark Testing with [benchmark.js](https://github.com/bestiejs/benchmark.js)
 - Check for latest versions of dependencies via [npm-check-updates](https://github.com/tjunnone/npm-check-updates)
 - Vulnerability scan via [snyk](https://github.com/Snyk/snyk)
-- ES6+ Testing via [babel-register](https://github.com/babel/babel/tree/master/packages/babel-register) with [Mocha](https://github.com/mochajs/mocha) & [Chai](https://github.com/chaijs/chai)
+- ES6+ Testing via [babel-register](https://github.com/babel/babel/tree/master/packages/babel-register) with [Mocha](https://github.com/mochajs/mocha), [Chai](https://github.com/chaijs/chai), [Sinon](https://github.com/sinonjs/sinon) and [sinon-chai](https://github.com/domenic/sinon-chai)
 - Generate HTML Reports from tests via [mochawesome](https://github.com/adamgruber/mochawesome)
 - ES6+ Code Coverage with [babel-istanbul](https://github.com/jmcriffey/babel-istanbul)
 - Ready for Continuous Integration & Delivery with [travis-ci](https://travis-ci.org)
