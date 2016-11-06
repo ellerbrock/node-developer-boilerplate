@@ -3,7 +3,7 @@
   "version": "0.4.3",
   "description": "Boilerplate for ES6+ Node.js and npm Developers",
   "author": "Maik Ellerbrock",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "repository": {
     "url": "git@github.com:ellerbrock/node-developer-boilerplate.git",
@@ -55,7 +55,8 @@
     "pretest": "npm run clean:coverage && npm run clean:reports",
     "test": "cross-env NODE_ENV=test mocha -c -S -R spec --compilers js:babel-register --check-leaks",
     "posttest": "cross-env NODE_ENV=test mocha -S -R mochawesome --compilers js:babel-register --reporter-options reportDir=reports --check-leaks",
-    "test:watch": "cross-env NODE_ENV=test npm test -- -w"
+    "test:watch": "cross-env NODE_ENV=test npm test -- -w",
+    "online": "git push --follow-tags origin master; npm publish"
   },
   "files": [
     "dist"
@@ -73,7 +74,8 @@
     "env": {
       "production": {
         "presets": [
-          "babili"
+          "babili",
+          "es2015"
         ]
       }
     }
@@ -92,6 +94,7 @@
     "babel-istanbul": "0.11.0",
     "babel-node-debug": "^2.0.0",
     "babel-preset-babili": "^0.0.8",
+    "babel-preset-es2015": "6.18.0",
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-stage-0": "6.16.0",
     "babel-register": "^6.18.0",
