@@ -88,7 +88,13 @@ When things getting more stable i will bump the version to 1.0.0 and write a det
 
 _Get the latest News about Web Development, Open Source, Tooling, Server & Security_
 
-[![Twitter](https://github.frapsoft.com/social/twitter.png)](https://twitter.com/frapsoft/)[![Facebook](https://github.frapsoft.com/social/facebook.png)](https://www.facebook.com/frapsoft/)[![Google+](https://github.frapsoft.com/social/google-plus.png)](https://plus.google.com/116540931335841862774)[![Gitter](https://github.frapsoft.com/social/gitter.png)](https://gitter.im/frapsoft/frapsoft/)[![Github](https://github.frapsoft.com/social/github.png)](https://github.com/ellerbrock/)
+[![Github](https://github.frapsoft.com/social/github.png)](https://github.com/ellerbrock/)
+[![Docker](https://github.frapsoft.com/social/docker.png)](https://hub.docker.com/u/frapsoft/)
+[![npm](https://github.frapsoft.com/social/npm.png)](https://www.npmjs.com/~ellerbrock)
+[![Twitter](https://github.frapsoft.com/social/twitter.png)](https://twitter.com/frapsoft/)
+[![Facebook](https://github.frapsoft.com/social/facebook.png)](https://www.facebook.com/frapsoft/)
+[![Google+](https://github.frapsoft.com/social/google-plus.png)](https://plus.google.com/116540931335841862774)
+[![Gitter](https://github.frapsoft.com/social/gitter.png)](https://gitter.im/frapsoft/frapsoft/)
 
 ### License
 
