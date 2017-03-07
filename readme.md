@@ -4,7 +4,7 @@
 
 [![Javascript](https://badges.frapsoft.com/javascript/code/javascript.svg?v=100)](https://github.com/ellerbrock/javascript-badges/) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/ellerbrock/javascript-badges/) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badges/) [![Gitter Chat](https://badges.gitter.im/frapsoft/frapsoft.svg)](https://gitter.im/frapsoft/frapsoft/)
 
-_Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, Code Coverage, JS Standard Style, Commit Guidelines, Git Hooks, Security Checks, Automatic Semantic Versioning, Benchmarking, Debugging, Monitoring, Source Map Generation, Auto Reload, Linting and more cool stuff ..._
+_Node / yarn Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, Code Coverage, JS Standard Style, Commit Guidelines, Git Hooks, Security Checks, Automatic Semantic Versioning, Benchmarking, Debugging, Monitoring, Source Map Generation, Auto Reload, Linting and more cool stuff ..._
 
 ## Project Status
 
@@ -22,7 +22,6 @@ _Node / npm Boilerplate with Babel ES6 / ES7 Support, Testing, CI Integration, C
 - Javascript Style Linting via [eslint-config-standard](https://github.com/feross/eslint-config-standard)
 - Automatic Semantic Releasing with [standard-version](https://github.com/conventional-changelog/standard-version)
 - Code Benchmark Testing with [benchmark.js](https://github.com/bestiejs/benchmark.js)
-- Check for latest versions of dependencies via [npm-check-updates](https://github.com/tjunnone/npm-check-updates)
 - Vulnerability scan via [snyk](https://github.com/Snyk/snyk)
 - ES6+ Testing via [babel-register](https://github.com/babel/babel/tree/master/packages/babel-register) with [Mocha](https://github.com/mochajs/mocha), [Chai](https://github.com/chaijs/chai), [Sinon](https://github.com/sinonjs/sinon) and [sinon-chai](https://github.com/domenic/sinon-chai)
 - Generate HTML Reports from tests via [mochawesome](https://github.com/adamgruber/mochawesome)
