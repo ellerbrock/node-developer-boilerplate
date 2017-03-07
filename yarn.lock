@@ -4107,7 +4107,7 @@ mocha@^3.2.0:
     mkdirp "0.5.1"
     supports-color "3.1.2"
 
-mochawesome-report-generator@^1.1.0:
+mochawesome-report-generator@1.1.0, mochawesome-report-generator@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mochawesome-report-generator/-/mochawesome-report-generator-1.1.0.tgz#dd0e168df8cd6784847e49f42ce7f85e5b6859d7"
   dependencies:

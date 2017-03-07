@@ -121,6 +121,7 @@
     "markdownlint-cli": "0.2.0",
     "mocha": "^3.2.0",
     "mochawesome": "^2.0.4",
+    "mochawesome-report-generator": "1.1.0",
     "nodejs-dashboard": "^0.4.0",
     "nodemon": "^1.11.0",
     "ntl": "1.2.0",
